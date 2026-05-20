@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chwink Real Estate Developers | Pune's Trusted Realtors Since 1987</title>
+  <meta name="description" content="Chwink Dhillon Real Estate Developers — Pune's leading realtors for residential, commercial, and industrial properties. 35+ years of trusted consultancy. We Mean Business & We Care.">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Utility Bar -->
+  <div class="utility-bar">
+    <div class="container">
+      <div class="utility-bar-left">
+        <span>📍 12, P.T. Gera Centre, Bund Garden Road, Pune 411001</span>
+        <a href="tel:+919823060807">📞 +91-9823060807</a>
+      </div>
+      <div class="utility-bar-right">
+        <a href="mailto:harleendhillon@chwink.com">harleendhillon@chwink.com</a>
+        <span>Registered — NAR India &amp; Estate Association of Pune</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Nav -->
+  <nav class="primary-nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="logo" aria-label="Chwink Real Estate Home">
+      <div class="logo-box">C</div>
+      CHWINK
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="residential.html">Residential</a>
+      <a href="commercial.html">Commercial</a>
+      <a href="industrial.html">Industrial</a>
+      <a href="clients.html">Clients</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode">
+        <span class="theme-icon">🌙</span>
+      </button>
+      <a href="contact.html" class="btn-primary nav-cta">Get in Touch</a>
+      <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-label="Mobile navigation">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="logo" style="color:#fff;">
+        <div class="logo-box">C</div> CHWINK
+      </a>
+      <button class="mobile-close" id="mobile-close" aria-label="Close menu">✕</button>
+    </div>
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="residential.html">Residential</a>
+    <a href="commercial.html">Commercial</a>
+    <a href="industrial.html">Industrial</a>
+    <a href="clients.html">Clients</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn-primary" style="margin-top:var(--s-lg); justify-content:center;">Get in Touch</a>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero-card-dark">
+    <img
+      src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1600&q=80"
+      alt="Pune city skyline"
+      class="hero-bg"
+      loading="eager">
+    <div class="hero-overlay"></div>
+    <div class="hero-content" style="max-width:1280px; margin:0 auto; width:100%; padding:0 var(--s-xl);">
+      <div style="max-width:52%;">
+        <span class="eyebrow">Since 1987 · Registered NAR India</span>
+        <h1 class="t-display-xl" style="margin-bottom:var(--s-lg); color:var(--c-on-dark);">
+          We Mean Business<br>&amp; We Care.
+        </h1>
+        <p class="t-heading-lg" style="color:var(--c-on-dark-mute); margin-bottom:var(--s-xxl);">
+          Pune's most trusted real estate consultancy — residential, commercial, and industrial properties for buyers, sellers, landlords, tenants, and MNCs.
+        </p>
+        <div class="flex-wrap">
+          <a href="commercial.html" class="btn-primary">Explore Properties</a>
+          <a href="about.html" class="btn-outline-on-dark">Our Story</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Stats Bar -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stat-item">
+        <div class="num" data-count="35" data-suffix="+">35+</div>
+        <div class="lbl">Years of Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="num" data-count="500" data-suffix="+">500+</div>
+        <div class="lbl">Properties Closed</div>
+      </div>
+      <div class="stat-item">
+        <div class="num" data-count="10" data-suffix="+">10+</div>
+        <div class="lbl">MNC Clients</div>
+      </div>
+      <div class="stat-item">
+        <div class="num" data-count="10" data-suffix="+">10+</div>
+        <div class="lbl">Builder Associations</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Expertise Cards -->
+  <section class="section-pad" style="background-color:var(--c-surface-soft);">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="eyebrow">What We Offer</p>
+        <h2 class="t-display-lg">Full-Spectrum Real Estate</h2>
+        <p class="t-body-md">From residential flats to built-to-suit factories — we cover every category across Pune's Eastern and Western corridors.</p>
+      </div>
+      <div class="grid-4 fade-in delay-2">
+        <div class="card">
+          <div class="corner-square"></div>
+          <div class="card-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80"
+              alt="Residential Properties Pune"
+              class="card-img"
+              loading="lazy">
+          </div>
+          <span class="badge-tag" style="margin-bottom:var(--s-sm);">Residential</span>
+          <h3 class="t-card-title" style="margin-bottom:var(--s-sm);">Flats &amp; Bungalows</h3>
+          <p class="t-body-sm" style="color:var(--c-mute); margin-bottom:var(--s-lg);">Premium apartments, villas, and bungalows by Pune's top developers — Lodha, Godrej, VTP, and more.</p>
+          <a href="residential.html" class="btn-ghost-link">View Residential</a>
+        </div>
+        <div class="card">
+          <div class="corner-square"></div>
+          <div class="card-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+              alt="Commercial Offices Pune"
+              class="card-img"
+              loading="lazy">
+          </div>
+          <span class="badge-tag" style="margin-bottom:var(--s-sm);">Commercial</span>
+          <h3 class="t-card-title" style="margin-bottom:var(--s-sm);">Offices &amp; Showrooms</h3>
+          <p class="t-body-sm" style="color:var(--c-mute); margin-bottom:var(--s-lg);">Grade-A offices, IT parks, showrooms, and built-to-suit options for MNCs expanding in Pune.</p>
+          <a href="commercial.html" class="btn-ghost-link">View Commercial</a>
+        </div>
+        <div class="card">
+          <div class="corner-square"></div>
+          <div class="card-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
+              alt="Industrial Properties Pune"
+              class="card-img"
+              loading="lazy">
+          </div>
+          <span class="badge-tag" style="margin-bottom:var(--s-sm);">Industrial</span>
+          <h3 class="t-card-title" style="margin-bottom:var(--s-sm);">Factories &amp; Warehouses</h3>
+          <p class="t-body-sm" style="color:var(--c-mute); margin-bottom:var(--s-lg);">Factory land, ready-to-use factories, warehousing and custom built-to-suit industrial units.</p>
+          <a href="industrial.html" class="btn-ghost-link">View Industrial</a>
+        </div>
+        <div class="card">
+          <div class="corner-square"></div>
+          <div class="card-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?auto=format&fit=crop&w=800&q=80"
+              alt="Real Estate Consultancy"
+              class="card-img"
+              loading="lazy">
+          </div>
+          <span class="badge-tag" style="margin-bottom:var(--s-sm);">Consultancy</span>
+          <h3 class="t-card-title" style="margin-bottom:var(--s-sm);">Investment &amp; Advisory</h3>
+          <p class="t-body-sm" style="color:var(--c-mute); margin-bottom:var(--s-lg);">Property investment advisory, tenant representation, housing loans, and relocation services for professionals.</p>
+          <a href="services.html" class="btn-ghost-link">Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Strip -->
+  <section class="cta-strip-dark fade-in">
+    <div class="container">
+      <p class="t-caption-md" style="color:var(--c-primary); margin-bottom:var(--s-md);">Serving Pune Since 1987</p>
+      <h2 class="t-display-lg" style="margin-bottom:var(--s-md);">Looking to Relocate or Invest in Pune?</h2>
+      <p class="t-body-md" style="color:var(--c-on-dark-mute); max-width:560px; margin:0 auto var(--s-xl);">Whether you're a buyer, seller, landlord, or tenant — we welcome every inquiry. The better informed we both become, the better we can serve you.</p>
+      <div class="actions">
+        <a href="contact.html" class="btn-primary">Contact Our Experts</a>
+        <a href="tel:+919823060807" class="btn-outline-on-dark">📞 +91-9823060807</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="eyebrow">Our Services</p>
+        <h2 class="t-display-lg">End-to-End Real Estate Solutions</h2>
+        <p class="t-body-md">From search to closure — we manage every step so you don't have to.</p>
+      </div>
+      <div class="grid-3 fade-in delay-2">
+        <div class="feature-card">
+          <div class="corner-square"></div>
+          <div class="icon">🏢</div>
+          <h3 class="t-heading-md" style="margin-bottom:var(--s-sm);">Commercial Office Leasing</h3>
+          <p class="t-body-sm" style="color:var(--c-mute); margin-bottom:var(--s-lg);">Dedicated leasing solutions for Grade-A offices and IT parks, with built-to-suit options for MNCs expanding in Pune.</p>
+          <a href="services.html" class="btn-ghost-link">Learn More</a>
+        </div>
+        <div class="feature-card">
+          <div class="corner-square"></div>
+          <div class="icon">🔑</div>
+          <h3 class="t-heading-md" style="margin-bottom:var(--s-sm);">Tenant Representation</h3>
+          <p class="t-body-sm" style="color:var(--c-mute); margin-bottom:var(--s-lg);">Acting exclusively in your interest to secure the best lease terms, locations, and fit-out conditions across Pune.</p>
+          <a href="services.html" class="btn-ghost-link">Learn More</a>
+        </div>
+        <div class="feature-card">
+          <div class="corner-square"></div>
+          <div class="icon">📈</div>
+          <h3 class="t-heading-md" style="margin-bottom:var(--s-sm);">Investment &amp; Asset Advisory</h3>
+          <p class="t-body-sm" style="color:var(--c-mute); margin-bottom:var(--s-lg);">Providing properties that appreciate and deliver greater monetary benefits — from residential plots to commercial assets.</p>
+          <a href="services.html" class="btn-ghost-link">Learn More</a>
+        </div>
+        <div class="feature-card">
+          <div class="corner-square"></div>
+          <div class="icon">🚚</div>
+          <h3 class="t-heading-md" style="margin-bottom:var(--s-sm);">Relocation Services</h3>
+          <p class="t-body-sm" style="color:var(--c-mute); margin-bottom:var(--s-lg);">Handling top management relocations for MNCs — residential accommodations matched to lifestyle and commute requirements.</p>
+          <a href="services.html" class="btn-ghost-link">Learn More</a>
+        </div>
+        <div class="feature-card">
+          <div class="corner-square"></div>
+          <div class="icon">🏗️</div>
+          <h3 class="t-heading-md" style="margin-bottom:var(--s-sm);">Project &amp; Construction Planning</h3>
+          <p class="t-body-sm" style="color:var(--c-mute); margin-bottom:var(--s-lg);">Assisting clients in planning and construction of houses and commercial developments — from concept to completion.</p>
+          <a href="services.html" class="btn-ghost-link">Learn More</a>
+        </div>
+        <div class="feature-card">
+          <div class="corner-square"></div>
+          <div class="icon">🏦</div>
+          <h3 class="t-heading-md" style="margin-bottom:var(--s-sm);">Housing Loan Assistance</h3>
+          <p class="t-body-sm" style="color:var(--c-mute); margin-bottom:var(--s-lg);">Arranging housing loans and guiding clients through the financial process to make property ownership accessible.</p>
+          <a href="services.html" class="btn-ghost-link">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Builder Associations -->
+  <section class="section-pad" style="background-color:var(--c-surface-soft);">
+    <div class="container">
+      <div class="section-header fade-in text-center">
+        <p class="eyebrow">Our Developer Network</p>
+        <h2 class="t-display-lg">Associated with Pune's Leading Builders</h2>
+        <p class="t-body-md">We work with the best developers across residential and commercial categories to bring you curated, quality options.</p>
+      </div>
+      <div class="grid-6 fade-in delay-2" style="margin-bottom:var(--s-xxl);">
+        <div class="client-card">
+          <div class="client-initial">P</div>
+          <span class="t-caption-md" style="font-size:12px;">Panchshil</span>
+        </div>
+        <div class="client-card">
+          <div class="client-initial">M</div>
+          <span class="t-caption-md" style="font-size:12px;">Malpani</span>
+        </div>
+        <div class="client-card">
+          <div class="client-initial">V</div>
+          <span class="t-caption-md" style="font-size:12px;">Vascon</span>
+        </div>
+        <div class="client-card">
+          <div class="client-initial">KP</div>
+          <span class="t-caption-md" style="font-size:12px;">Kolte Patil</span>
+        </div>
+        <div class="client-card">
+          <div class="client-initial">L</div>
+          <span class="t-caption-md" style="font-size:12px;">Lodha</span>
+        </div>
+        <div class="client-card">
+          <div class="client-initial">PR</div>
+          <span class="t-caption-md" style="font-size:12px;">Pride Builder</span>
+        </div>
+        <div class="client-card">
+          <div class="client-initial">GG</div>
+          <span class="t-caption-md" style="font-size:12px;">Goel Ganga</span>
+        </div>
+        <div class="client-card">
+          <div class="client-initial">NY</div>
+          <span class="t-caption-md" style="font-size:12px;">Nyati Builder</span>
+        </div>
+        <div class="client-card">
+          <div class="client-initial">VTP</div>
+          <span class="t-caption-md" style="font-size:12px;">VTP Realty</span>
+        </div>
+        <div class="client-card">
+          <div class="client-initial">GP</div>
+          <span class="t-caption-md" style="font-size:12px;">Godrej Properties</span>
+        </div>
+      </div>
+      <div class="text-center fade-in">
+        <a href="clients.html" class="btn-outline">View All Clients &amp; Associations</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="grid-2-1 fade-in">
+        <div>
+          <div class="section-header">
+            <p class="eyebrow">Why Chwink</p>
+            <h2 class="t-display-lg">35+ Years of Delivering Measurable Results</h2>
+          </div>
+          <p class="t-body-md" style="color:var(--c-mute); margin-bottom:var(--s-xl);">
+            Chwink Dhillon Estate Developer has been instrumental in setting up large offices, factories, industries, and property development projects for MNCs across Pune. We also specialize in residential relocation of top management professionals.
+          </p>
+          <p class="t-body-md" style="color:var(--c-mute); margin-bottom:var(--s-xxl);">
+            We believe in providing properties that will appreciate and result in greater monetary benefits for buyers who intend to purchase as investment opportunities. Our goal is to make things happen for you.
+          </p>
+          <div style="display:flex; flex-direction:column; gap:var(--s-lg);">
+            <div style="display:flex; gap:var(--s-md); align-items:flex-start;">
+              <span style="color:var(--c-primary); font-size:20px; flex-shrink:0; margin-top:2px;">✓</span>
+              <div>
+                <strong class="t-body-strong">Registered with NAR India &amp; Estate Association of Pune</strong>
+                <p class="t-body-sm" style="color:var(--c-mute);">Backed by India's most recognized realtor associations for credibility and professional standards.</p>
+              </div>
+            </div>
+            <div style="display:flex; gap:var(--s-md); align-items:flex-start;">
+              <span style="color:var(--c-primary); font-size:20px; flex-shrink:0; margin-top:2px;">✓</span>
+              <div>
+                <strong class="t-body-strong">Established 1987 — A Registered Firm</strong>
+                <p class="t-body-sm" style="color:var(--c-mute);">One of Pune's oldest and most trusted real estate firms with a proven track record across decades.</p>
+              </div>
+            </div>
+            <div style="display:flex; gap:var(--s-md); align-items:flex-start;">
+              <span style="color:var(--c-primary); font-size:20px; flex-shrink:0; margin-top:2px;">✓</span>
+              <div>
+                <strong class="t-body-strong">Covering All of Pune — East to West</strong>
+                <p class="t-body-sm" style="color:var(--c-mute);">From Bund Garden and Kalyani Nagar to Hinjewadi and Chakan — we know every micro-market in Pune.</p>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:var(--s-xxl);">
+            <a href="about.html" class="btn-primary">About Us</a>
+          </div>
+        </div>
+        <div>
+          <div class="grid-2" style="gap:var(--s-md);">
+            <div class="stat-card">
+              <div class="stat-number" data-count="35" data-suffix="+">35+</div>
+              <div class="stat-label">Years Active</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" data-count="10" data-suffix="+">10+</div>
+              <div class="stat-label">Builder Partners</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" data-count="10" data-suffix="+">10+</div>
+              <div class="stat-label">MNC Clients</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" data-count="500" data-suffix="+">500+</div>
+              <div class="stat-label">Properties Closed</div>
+            </div>
+          </div>
+          <div class="card" style="margin-top:var(--s-md);">
+            <div class="corner-square"></div>
+            <p class="t-caption-md" style="color:var(--c-primary); margin-bottom:var(--s-sm);">Head Office</p>
+            <p class="t-body-sm" style="color:var(--c-mute); margin-bottom:var(--s-md);">
+              12, P.T. Gera Centre, 1st Floor,<br>
+              Bund Garden Road, Pune - 411001
+            </p>
+            <p class="t-body-sm" style="margin-bottom:var(--s-xs);">
+              <a href="tel:+919823060807" style="color:var(--c-ink); text-decoration:none;">📞 +91-9823060807</a>
+            </p>
+            <p class="t-body-sm">
+              <a href="mailto:harleendhillon@chwink.com" style="color:var(--c-link-blue);">harleendhillon@chwink.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="cta-strip-dark fade-in">
+    <div class="container">
+      <h2 class="t-display-lg" style="margin-bottom:var(--s-md);">Let's Find Your Dream Property</h2>
+      <p class="t-body-md" style="color:var(--c-on-dark-mute); max-width:520px; margin:0 auto var(--s-xl);">
+        Call, email, or visit us — the better informed we both become, the better you can be served.
+      </p>
+      <div class="actions">
+        <a href="contact.html" class="btn-primary">Send Us a Message</a>
+        <a href="residential.html" class="btn-outline-on-dark">Browse Properties</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom:var(--s-md); display:inline-flex;">
+            <div class="logo-box">C</div> CHWINK
+          </a>
+          <p class="brand-desc">Chwink Dhillon Real Estate Developers — Pune's trusted property consultancy since 1987. Registered with NAR India &amp; Estate Association of Pune.</p>
+          <div class="footer-social">
+            <a href="mailto:harleendhillon@chwink.com" aria-label="Email us">✉</a>
+            <a href="tel:+919823060807" aria-label="Call us">📞</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Properties</h4>
+          <a href="residential.html">Residential</a>
+          <a href="commercial.html">Commercial</a>
+          <a href="industrial.html">Industrial</a>
+          <a href="clients.html">Our Clients</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="clients.html">MNC Associations</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="tel:+919823060807">+91-9823060807</a>
+          <a href="tel:+912026166799">+91-20-26166799</a>
+          <a href="tel:+912041312545">+91-20-41312545</a>
+          <a href="mailto:harleendhillon@chwink.com">harleendhillon@chwink.com</a>
+          <p style="margin-top:var(--s-sm);">12, P.T. Gera Centre, 1st Floor,<br>Bund Garden Road, Pune 411001</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Chwink Dhillons Real Estate Developers. All Rights Reserved.</p>
+        <div style="display:flex; gap:var(--s-xl);">
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="services.html">Services</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/919823060807" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="./main.js"></script>
+</body>
+</html>
