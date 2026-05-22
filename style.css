@@ -1582,14 +1582,14 @@ ul, ol {
 }
 
 .process-step:nth-child(odd) {
-  border-left: 2px solid #cbd5e1;
-  border-bottom: 2px solid #cbd5e1;
+  border-left: 2px solid var(--c-hairline);
+  border-bottom: 2px solid var(--c-hairline);
   flex-direction: row;
 }
 
 .process-step:nth-child(even) {
-  border-right: 2px solid #cbd5e1;
-  border-bottom: 2px solid #cbd5e1;
+  border-right: 2px solid var(--c-hairline);
+  border-bottom: 2px solid var(--c-hairline);
   flex-direction: row-reverse;
 }
 
@@ -1630,7 +1630,7 @@ ul, ol {
 .step-title {
   font-size: 24px;
   font-weight: 800;
-  color: #0f172a;
+  color: var(--c-ink);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-top: 0;
@@ -1685,19 +1685,28 @@ ul, ol {
 }
 
 .staggered-card {
-  background: #ffffff;
+  background: var(--c-canvas);
+  border: 1px solid var(--c-hairline);
   border-radius: 16px;
   padding: 40px 32px;
-  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
+  transition: transform var(--t-lift), box-shadow var(--t-lift), background-color var(--t-base), border-color var(--t-base);
   overflow: hidden;
 }
 .staggered-card:hover {
-  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
   transform: translateY(-5px);
 }
 .staggered-grid .staggered-card:nth-child(odd):hover {
   transform: translateY(35px);
+}
+
+[data-theme="dark"] .staggered-card {
+  background: var(--c-surface-soft);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+[data-theme="dark"] .staggered-card:hover {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .staggered-img-wrap {
@@ -1732,7 +1741,7 @@ ul, ol {
 }
 
 .staggered-card .t-card-title {
-  color: #0f172a;
+  color: var(--c-ink);
   font-size: 20px;
   font-weight: 800;
   margin-bottom: 12px;
@@ -1740,7 +1749,7 @@ ul, ol {
 }
 
 .staggered-card .t-body-sm {
-  color: #64748b;
+  color: var(--c-body);
   line-height: 1.6;
 }
 
@@ -1783,7 +1792,7 @@ ul, ol {
   .process-step {
     flex-direction: column !important;
     border-right: none !important;
-    border-left: 2px solid #cbd5e1 !important;
+    border-left: 2px solid var(--c-hairline) !important;
   }
   .step-content, .step-image {
     width: 100%;
