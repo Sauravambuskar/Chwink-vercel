@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initNavScroll();
   initBackToTop();
   initCounters();
+  initSubNav();
 });
 
 /* ── THEME TOGGLE ───────────────────────────────────────── */
@@ -168,3 +169,76 @@ function initPillTabs(tabsSelector, targetAttr) {
 }
 
 initPillTabs(".pill-tab[data-filter]", "data-category");
+
+/* ── SUB-NAV ACTIVE STATE & SMOOTH SCROLLING ────────────── */
+function initSubNav() {
+  const links = document.querySelectorAll(".sub-nav-strip a");
+  if (!links.length) return;
+
+  const nav = document.querySelector(".primary-nav");
+  const subNavStrip = document.querySelector(".sub-nav-strip");
+
+  // Click handler
+  links.forEach(link => {
+    const href = link.getAttribute("href");
+    if (!href.startsWith("#")) return;
+
+    link.addEventListener("click", (e) => {
+      const targetEl = document.querySelector(href);
+      if (targetEl) {
+        e.preventDefault();
+        
+        // Remove active from all siblings
+        links.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+
+        // Scroll smooth with offset for sticky headers
+        const navOffset = nav ? nav.offsetHeight : 70;
+        const subNavOffset = subNavStrip ? subNavStrip.offsetHeight : 50;
+        const targetPosition = targetEl.getBoundingClientRect().top + window.scrollY - navOffset - subNavOffset + 2;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth"
+        });
+
+        // Update hash in URL
+        history.pushState(null, null, href);
+      }
+    });
+  });
+
+  // Scroll spy: Update active tab based on scroll position
+  const observerOptions = {
+    root: null,
+    rootMargin: "-25% 0px -55% 0px", // Trigger when the section occupies the central-upper viewport
+    threshold: 0
+  };
+
+  const spyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute("id");
+        if (!id) return;
+        
+        const activeLink = document.querySelector(`.sub-nav-strip a[href="#${id}"]`);
+        if (activeLink) {
+          links.forEach(link => {
+            if (link.getAttribute("href").startsWith("#")) {
+              link.classList.remove("active");
+            }
+          });
+          activeLink.classList.add("active");
+        }
+      }
+    });
+  }, observerOptions);
+
+  links.forEach(link => {
+    const href = link.getAttribute("href");
+    if (href.startsWith("#")) {
+      const section = document.querySelector(href);
+      if (section) spyObserver.observe(section);
+    }
+  });
+}

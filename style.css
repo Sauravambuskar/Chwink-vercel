@@ -10,7 +10,8 @@
   --c-accent-pale:      #bff230;
 
   /* Surfaces — light */
-  --c-canvas:           #ffffff;
+  --c-canvas:           #f7f7f5;
+  --bg-pattern:         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Cpath d='M160,0 V400 M0,120 H160 M0,280 H160 M80,120 V280 M80,200 H160 M320,0 V400 M320,120 H400 M320,280 H400 M160,200 H320 M160,80 H320 M240,80 V200 M160,320 H320 M260,200 V320' stroke='%233A3A38' stroke-width='0.5' stroke-opacity='0.3' fill='none' /%3E%3C/svg%3E");
   --c-surface-soft:     #f7f7f7;
   --c-surface-dark:     #000000;
   --c-surface-elevated: #1a1a1a;
@@ -61,6 +62,7 @@
    ═══════════════════════════════════════════ */
 [data-theme="dark"] {
   --c-canvas:           #0e0e0e;
+  --bg-pattern:         none;
   --c-surface-soft:     #1a1a1a;
   --c-surface-dark:     #000000;
   --c-surface-elevated: #242424;
@@ -94,10 +96,11 @@ html {
 body {
   font-family: var(--font-family);
   background-color: var(--c-canvas);
+  background-image: var(--bg-pattern);
   color: var(--c-ink);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  transition: background-color var(--t-base), color var(--t-base);
+  transition: background-color var(--t-base), color var(--t-base), background-image var(--t-base);
 }
 
 img {
@@ -485,7 +488,7 @@ ul, ol {
 }
 
 .sub-nav-strip a.active {
-  color: var(--c-on-dark);
+  color: var(--c-canvas);
   background-color: var(--c-ink);
 }
 
@@ -1501,7 +1504,7 @@ ul, ol {
 
 .pill-tab.active {
   background-color: var(--c-ink);
-  color: var(--c-on-dark);
+  color: var(--c-canvas);
   border-color: var(--c-ink);
 }
 
