@@ -17,6 +17,8 @@
   --c-surface-elevated: #1a1a1a;
   --c-hairline:         #cccccc;
   --c-hairline-strong:  #5e5e5e;
+  --c-glass-bg:         rgba(255, 255, 255, 0.65);
+  --c-glass-border:     rgba(255, 255, 255, 0.5);
 
   /* Text — light */
   --c-ink:              #000000;
@@ -68,6 +70,8 @@
   --c-surface-elevated: #242424;
   --c-hairline:         #2e2e2e;
   --c-hairline-strong:  #404040;
+  --c-glass-bg:         rgba(15, 15, 15, 0.65);
+  --c-glass-border:     rgba(255, 255, 255, 0.1);
 
   --c-ink:              #f0f0f0;
   --c-body:             #cccccc;
@@ -585,11 +589,13 @@ ul, ol {
 
 .hero-text-box {
   max-width: 560px;
-  background: var(--c-canvas);
+  background: var(--c-glass-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   padding: 48px;
   border-radius: 20px;
-  border: 1px solid var(--c-hairline);
-  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--c-glass-border);
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.1);
 }
 
 .hero-title {
