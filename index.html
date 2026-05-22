@@ -54,7 +54,7 @@
   <div class="mobile-overlay" id="mobile-overlay"></div>
   <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-label="Mobile navigation">
     <div class="mobile-drawer-header">
-      <a href="index.html" class="logo" style="color:#fff;">
+      <a href="index.html" class="logo">
         <div class="logo-box">C</div> CHWINK
       </a>
       <button class="mobile-close" id="mobile-close" aria-label="Close menu">✕</button>
@@ -71,25 +71,26 @@
   </div>
 
   <!-- Hero -->
-  <header class="hero-card-dark">
-    <img
-      src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1600&q=80"
-      alt="Pune city skyline"
-      class="hero-bg"
-      loading="eager">
-    <div class="hero-overlay"></div>
+  <header class="hero-card-light">
+    <div class="hero-slider">
+      <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1600&q=80" alt="Pune city skyline" class="hero-bg slide-1" loading="eager">
+      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80" alt="Commercial Real Estate" class="hero-bg slide-2" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80" alt="Industrial Properties" class="hero-bg slide-3" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=80" alt="Residential Real Estate" class="hero-bg slide-4" loading="lazy">
+    </div>
+    <div class="hero-overlay-light"></div>
     <div class="hero-content" style="max-width:1280px; margin:0 auto; width:100%; padding:0 var(--s-xl);">
-      <div style="max-width:52%;">
+      <div class="hero-text-box">
         <span class="eyebrow">Since 1987 · Registered NAR India</span>
-        <h1 class="t-display-xl" style="margin-bottom:var(--s-lg); color:var(--c-on-dark);">
+        <h1 class="t-display-xl hero-title">
           We Mean Business<br>&amp; We Care.
         </h1>
-        <p class="t-heading-lg" style="color:var(--c-on-dark-mute); margin-bottom:var(--s-xxl);">
+        <p class="t-heading-lg hero-subtitle">
           Pune's most trusted real estate consultancy — residential, commercial, and industrial properties for buyers, sellers, landlords, tenants, and MNCs.
         </p>
         <div class="flex-wrap">
           <a href="commercial.html" class="btn-primary">Explore Properties</a>
-          <a href="about.html" class="btn-outline-on-dark">Our Story</a>
+          <a href="about.html" class="btn-outline-glass">Our Story</a>
         </div>
       </div>
     </div>
@@ -209,43 +210,55 @@
       </div>
       <div class="grid-3 fade-in delay-2">
         <div class="feature-card">
-          <div class="corner-square"></div>
-          <div class="icon">🏢</div>
+          <div class="corner-square" style="z-index: 2;"></div>
+          <div class="feature-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Commercial Office Leasing" class="feature-card-img" loading="lazy">
+          </div>
           <h3 class="t-heading-md" style="margin-bottom:var(--s-sm);">Commercial Office Leasing</h3>
           <p class="t-body-sm" style="color:var(--c-mute); margin-bottom:var(--s-lg);">Dedicated leasing solutions for Grade-A offices and IT parks, with built-to-suit options for MNCs expanding in Pune.</p>
           <a href="services.html" class="btn-ghost-link">Learn More</a>
         </div>
         <div class="feature-card">
-          <div class="corner-square"></div>
-          <div class="icon">🔑</div>
+          <div class="corner-square" style="z-index: 2;"></div>
+          <div class="feature-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?auto=format&fit=crop&w=800&q=80" alt="Tenant Representation" class="feature-card-img" loading="lazy">
+          </div>
           <h3 class="t-heading-md" style="margin-bottom:var(--s-sm);">Tenant Representation</h3>
           <p class="t-body-sm" style="color:var(--c-mute); margin-bottom:var(--s-lg);">Acting exclusively in your interest to secure the best lease terms, locations, and fit-out conditions across Pune.</p>
           <a href="services.html" class="btn-ghost-link">Learn More</a>
         </div>
         <div class="feature-card">
-          <div class="corner-square"></div>
-          <div class="icon">📈</div>
+          <div class="corner-square" style="z-index: 2;"></div>
+          <div class="feature-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Investment and Asset Advisory" class="feature-card-img" loading="lazy">
+          </div>
           <h3 class="t-heading-md" style="margin-bottom:var(--s-sm);">Investment &amp; Asset Advisory</h3>
           <p class="t-body-sm" style="color:var(--c-mute); margin-bottom:var(--s-lg);">Providing properties that appreciate and deliver greater monetary benefits — from residential plots to commercial assets.</p>
           <a href="services.html" class="btn-ghost-link">Learn More</a>
         </div>
         <div class="feature-card">
-          <div class="corner-square"></div>
-          <div class="icon">🚚</div>
+          <div class="corner-square" style="z-index: 2;"></div>
+          <div class="feature-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=800&q=80" alt="Relocation Services" class="feature-card-img" loading="lazy">
+          </div>
           <h3 class="t-heading-md" style="margin-bottom:var(--s-sm);">Relocation Services</h3>
           <p class="t-body-sm" style="color:var(--c-mute); margin-bottom:var(--s-lg);">Handling top management relocations for MNCs — residential accommodations matched to lifestyle and commute requirements.</p>
           <a href="services.html" class="btn-ghost-link">Learn More</a>
         </div>
         <div class="feature-card">
-          <div class="corner-square"></div>
-          <div class="icon">🏗️</div>
+          <div class="corner-square" style="z-index: 2;"></div>
+          <div class="feature-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=800&q=80" alt="Project and Construction Planning" class="feature-card-img" loading="lazy">
+          </div>
           <h3 class="t-heading-md" style="margin-bottom:var(--s-sm);">Project &amp; Construction Planning</h3>
           <p class="t-body-sm" style="color:var(--c-mute); margin-bottom:var(--s-lg);">Assisting clients in planning and construction of houses and commercial developments — from concept to completion.</p>
           <a href="services.html" class="btn-ghost-link">Learn More</a>
         </div>
         <div class="feature-card">
-          <div class="corner-square"></div>
-          <div class="icon">🏦</div>
+          <div class="corner-square" style="z-index: 2;"></div>
+          <div class="feature-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80" alt="Housing Loan Assistance" class="feature-card-img" loading="lazy">
+          </div>
           <h3 class="t-heading-md" style="margin-bottom:var(--s-sm);">Housing Loan Assistance</h3>
           <p class="t-body-sm" style="color:var(--c-mute); margin-bottom:var(--s-lg);">Arranging housing loans and guiding clients through the financial process to make property ownership accessible.</p>
           <a href="services.html" class="btn-ghost-link">Learn More</a>
@@ -262,46 +275,91 @@
         <h2 class="t-display-lg">Associated with Pune's Leading Builders</h2>
         <p class="t-body-md">We work with the best developers across residential and commercial categories to bring you curated, quality options.</p>
       </div>
-      <div class="grid-6 fade-in delay-2" style="margin-bottom:var(--s-xxl);">
-        <div class="client-card">
-          <div class="client-initial">P</div>
-          <span class="t-caption-md" style="font-size:12px;">Panchshil</span>
-        </div>
-        <div class="client-card">
-          <div class="client-initial">M</div>
-          <span class="t-caption-md" style="font-size:12px;">Malpani</span>
-        </div>
-        <div class="client-card">
-          <div class="client-initial">V</div>
-          <span class="t-caption-md" style="font-size:12px;">Vascon</span>
-        </div>
-        <div class="client-card">
-          <div class="client-initial">KP</div>
-          <span class="t-caption-md" style="font-size:12px;">Kolte Patil</span>
-        </div>
-        <div class="client-card">
-          <div class="client-initial">L</div>
-          <span class="t-caption-md" style="font-size:12px;">Lodha</span>
-        </div>
-        <div class="client-card">
-          <div class="client-initial">PR</div>
-          <span class="t-caption-md" style="font-size:12px;">Pride Builder</span>
-        </div>
-        <div class="client-card">
-          <div class="client-initial">GG</div>
-          <span class="t-caption-md" style="font-size:12px;">Goel Ganga</span>
-        </div>
-        <div class="client-card">
-          <div class="client-initial">NY</div>
-          <span class="t-caption-md" style="font-size:12px;">Nyati Builder</span>
-        </div>
-        <div class="client-card">
-          <div class="client-initial">VTP</div>
-          <span class="t-caption-md" style="font-size:12px;">VTP Realty</span>
-        </div>
-        <div class="client-card">
-          <div class="client-initial">GP</div>
-          <span class="t-caption-md" style="font-size:12px;">Godrej Properties</span>
+      <div class="client-slider-container fade-in delay-2" style="margin-bottom:var(--s-xxl);">
+        <div class="client-slider-track">
+          <!-- Original set -->
+          <div class="client-card">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=200&h=200&q=80" alt="Panchshil" class="client-logo-img" loading="lazy">
+            <span class="t-caption-md">Panchshil</span>
+          </div>
+          <div class="client-card">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=200&h=200&q=80" alt="Malpani" class="client-logo-img" loading="lazy">
+            <span class="t-caption-md">Malpani</span>
+          </div>
+          <div class="client-card">
+            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=200&h=200&q=80" alt="Vascon" class="client-logo-img" loading="lazy">
+            <span class="t-caption-md">Vascon</span>
+          </div>
+          <div class="client-card">
+            <img src="https://images.unsplash.com/photo-1605146769289-440113cc3d00?auto=format&fit=crop&w=200&h=200&q=80" alt="Kolte Patil" class="client-logo-img" loading="lazy">
+            <span class="t-caption-md">Kolte Patil</span>
+          </div>
+          <div class="client-card">
+            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=200&h=200&q=80" alt="Lodha" class="client-logo-img" loading="lazy">
+            <span class="t-caption-md">Lodha</span>
+          </div>
+          <div class="client-card">
+            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=200&h=200&q=80" alt="Pride Builder" class="client-logo-img" loading="lazy">
+            <span class="t-caption-md">Pride Builder</span>
+          </div>
+          <div class="client-card">
+            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=200&h=200&q=80" alt="Goel Ganga" class="client-logo-img" loading="lazy">
+            <span class="t-caption-md">Goel Ganga</span>
+          </div>
+          <div class="client-card">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=200&h=200&q=80" alt="Nyati Builder" class="client-logo-img" loading="lazy">
+            <span class="t-caption-md">Nyati Builder</span>
+          </div>
+          <div class="client-card">
+            <img src="https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=200&h=200&q=80" alt="VTP Realty" class="client-logo-img" loading="lazy">
+            <span class="t-caption-md">VTP Realty</span>
+          </div>
+          <div class="client-card">
+            <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=200&h=200&q=80" alt="Godrej Properties" class="client-logo-img" loading="lazy">
+            <span class="t-caption-md">Godrej Properties</span>
+          </div>
+
+          <!-- Duplicated set for seamless loop -->
+          <div class="client-card">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=200&h=200&q=80" alt="Panchshil" class="client-logo-img" loading="lazy">
+            <span class="t-caption-md">Panchshil</span>
+          </div>
+          <div class="client-card">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=200&h=200&q=80" alt="Malpani" class="client-logo-img" loading="lazy">
+            <span class="t-caption-md">Malpani</span>
+          </div>
+          <div class="client-card">
+            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=200&h=200&q=80" alt="Vascon" class="client-logo-img" loading="lazy">
+            <span class="t-caption-md">Vascon</span>
+          </div>
+          <div class="client-card">
+            <img src="https://images.unsplash.com/photo-1605146769289-440113cc3d00?auto=format&fit=crop&w=200&h=200&q=80" alt="Kolte Patil" class="client-logo-img" loading="lazy">
+            <span class="t-caption-md">Kolte Patil</span>
+          </div>
+          <div class="client-card">
+            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=200&h=200&q=80" alt="Lodha" class="client-logo-img" loading="lazy">
+            <span class="t-caption-md">Lodha</span>
+          </div>
+          <div class="client-card">
+            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=200&h=200&q=80" alt="Pride Builder" class="client-logo-img" loading="lazy">
+            <span class="t-caption-md">Pride Builder</span>
+          </div>
+          <div class="client-card">
+            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=200&h=200&q=80" alt="Goel Ganga" class="client-logo-img" loading="lazy">
+            <span class="t-caption-md">Goel Ganga</span>
+          </div>
+          <div class="client-card">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=200&h=200&q=80" alt="Nyati Builder" class="client-logo-img" loading="lazy">
+            <span class="t-caption-md">Nyati Builder</span>
+          </div>
+          <div class="client-card">
+            <img src="https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=200&h=200&q=80" alt="VTP Realty" class="client-logo-img" loading="lazy">
+            <span class="t-caption-md">VTP Realty</span>
+          </div>
+          <div class="client-card">
+            <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=200&h=200&q=80" alt="Godrej Properties" class="client-logo-img" loading="lazy">
+            <span class="t-caption-md">Godrej Properties</span>
+          </div>
         </div>
       </div>
       <div class="text-center fade-in">
@@ -313,77 +371,95 @@
   <!-- Why Choose Us -->
   <section class="section-pad">
     <div class="container">
-      <div class="grid-2-1 fade-in">
-        <div>
-          <div class="section-header">
-            <p class="eyebrow">Why Chwink</p>
-            <h2 class="t-display-lg">35+ Years of Delivering Measurable Results</h2>
-          </div>
-          <p class="t-body-md" style="color:var(--c-mute); margin-bottom:var(--s-xl);">
+      <div class="grid-split fade-in">
+        <div style="padding-right: 40px;">
+          <span class="pill-badge">Why Chwink</span>
+          <h2 class="t-display-lg" style="color: #0f172a; margin-bottom: 24px; font-weight: 800; line-height: 1.2;">
+            35+ Years of Delivering Measurable Results
+          </h2>
+          <p class="t-body-md" style="color: #64748b; margin-bottom: 20px;">
             Chwink Dhillon Estate Developer has been instrumental in setting up large offices, factories, industries, and property development projects for MNCs across Pune. We also specialize in residential relocation of top management professionals.
           </p>
-          <p class="t-body-md" style="color:var(--c-mute); margin-bottom:var(--s-xxl);">
+          <p class="t-body-md" style="color: #64748b; margin-bottom: 32px;">
             We believe in providing properties that will appreciate and result in greater monetary benefits for buyers who intend to purchase as investment opportunities. Our goal is to make things happen for you.
           </p>
-          <div style="display:flex; flex-direction:column; gap:var(--s-lg);">
-            <div style="display:flex; gap:var(--s-md); align-items:flex-start;">
-              <span style="color:var(--c-primary); font-size:20px; flex-shrink:0; margin-top:2px;">✓</span>
-              <div>
-                <strong class="t-body-strong">Registered with NAR India &amp; Estate Association of Pune</strong>
-                <p class="t-body-sm" style="color:var(--c-mute);">Backed by India's most recognized realtor associations for credibility and professional standards.</p>
-              </div>
-            </div>
-            <div style="display:flex; gap:var(--s-md); align-items:flex-start;">
-              <span style="color:var(--c-primary); font-size:20px; flex-shrink:0; margin-top:2px;">✓</span>
-              <div>
-                <strong class="t-body-strong">Established 1987 — A Registered Firm</strong>
-                <p class="t-body-sm" style="color:var(--c-mute);">One of Pune's oldest and most trusted real estate firms with a proven track record across decades.</p>
-              </div>
-            </div>
-            <div style="display:flex; gap:var(--s-md); align-items:flex-start;">
-              <span style="color:var(--c-primary); font-size:20px; flex-shrink:0; margin-top:2px;">✓</span>
-              <div>
-                <strong class="t-body-strong">Covering All of Pune — East to West</strong>
-                <p class="t-body-sm" style="color:var(--c-mute);">From Bund Garden and Kalyani Nagar to Hinjewadi and Chakan — we know every micro-market in Pune.</p>
-              </div>
-            </div>
-          </div>
-          <div style="margin-top:var(--s-xxl);">
-            <a href="about.html" class="btn-primary">About Us</a>
+          
+          <a href="about.html" class="btn-primary" style="display: inline-flex; align-items: center; gap: 8px; border-radius: 8px; padding: 0 24px;">
+            Read More <span style="font-size: 18px;">→</span>
+          </a>
+
+          <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #e2e8f0;">
+             <p class="t-caption-md" style="color:var(--c-primary); margin-bottom: 12px; font-weight: 700;">Head Office</p>
+             <p class="t-body-sm" style="color: #64748b; margin-bottom: 16px;">
+               12, P.T. Gera Centre, 1st Floor,<br>
+               Bund Garden Road, Pune - 411001
+             </p>
+             <div style="display: flex; gap: 20px;">
+               <a href="tel:+919823060807" style="color: #0f172a; font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 6px;">
+                 📞 +91-9823060807
+               </a>
+               <a href="mailto:harleendhillon@chwink.com" style="color: var(--c-primary); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 6px;">
+                 ✉ Email Us
+               </a>
+             </div>
           </div>
         </div>
+
         <div>
-          <div class="grid-2" style="gap:var(--s-md);">
-            <div class="stat-card">
-              <div class="stat-number" data-count="35" data-suffix="+">35+</div>
-              <div class="stat-label">Years Active</div>
+          <div class="staggered-grid">
+            
+            <div class="staggered-card">
+              <div class="staggered-img-wrap">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80" alt="35+ Years Active" loading="lazy">
+              </div>
+              <div class="icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </div>
+              <h3 class="t-card-title">35+ Years Active</h3>
+              <p class="t-body-sm">Three decades of proven experience delivering exceptional real estate consultancy across Pune's evolving markets.</p>
             </div>
-            <div class="stat-card">
-              <div class="stat-number" data-count="10" data-suffix="+">10+</div>
-              <div class="stat-label">Builder Partners</div>
+
+            <div class="staggered-card">
+              <div class="staggered-img-wrap">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="10+ Builder Partners" loading="lazy">
+              </div>
+              <div class="icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3 class="t-card-title">10+ Builder Partners</h3>
+              <p class="t-body-sm">Exclusive associations with Pune's top-tier developers ensuring access to premium residential and commercial inventory.</p>
             </div>
-            <div class="stat-card">
-              <div class="stat-number" data-count="10" data-suffix="+">10+</div>
-              <div class="stat-label">MNC Clients</div>
+
+            <div class="staggered-card">
+              <div class="staggered-img-wrap">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" alt="10+ MNC Clients" loading="lazy">
+              </div>
+              <div class="icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <h3 class="t-card-title">10+ MNC Clients</h3>
+              <p class="t-body-sm">Trusted by multinational corporations for setting up large offices, factories, and managing executive relocations.</p>
             </div>
-            <div class="stat-card">
-              <div class="stat-number" data-count="500" data-suffix="+">500+</div>
-              <div class="stat-label">Properties Closed</div>
+
+            <div class="staggered-card">
+              <div class="staggered-img-wrap">
+                <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?auto=format&fit=crop&w=600&q=80" alt="500+ Properties Closed" loading="lazy">
+              </div>
+              <div class="icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="t-card-title">500+ Properties Closed</h3>
+              <p class="t-body-sm">A vast track record of successful transactions, maximizing monetary benefits for our investors and buyers.</p>
             </div>
-          </div>
-          <div class="card" style="margin-top:var(--s-md);">
-            <div class="corner-square"></div>
-            <p class="t-caption-md" style="color:var(--c-primary); margin-bottom:var(--s-sm);">Head Office</p>
-            <p class="t-body-sm" style="color:var(--c-mute); margin-bottom:var(--s-md);">
-              12, P.T. Gera Centre, 1st Floor,<br>
-              Bund Garden Road, Pune - 411001
-            </p>
-            <p class="t-body-sm" style="margin-bottom:var(--s-xs);">
-              <a href="tel:+919823060807" style="color:var(--c-ink); text-decoration:none;">📞 +91-9823060807</a>
-            </p>
-            <p class="t-body-sm">
-              <a href="mailto:harleendhillon@chwink.com" style="color:var(--c-link-blue);">harleendhillon@chwink.com</a>
-            </p>
+
           </div>
         </div>
       </div>
