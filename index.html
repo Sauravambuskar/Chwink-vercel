@@ -25,28 +25,27 @@
 
   <!-- Primary Nav -->
   <nav class="primary-nav" role="navigation" aria-label="Main navigation">
-    <a href="index.html" class="logo" aria-label="Chwink Real Estate Home">
-      <div class="logo-box">C</div>
-      CHWINK
-    </a>
-    <div class="nav-links" id="nav-links">
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="residential.html">Residential</a>
-      <a href="commercial.html">Commercial</a>
-      <a href="industrial.html">Industrial</a>
-      <a href="clients.html">Clients</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+    <div class="nav-center-group">
+      <a href="index.html" class="logo" aria-label="Chwink Real Estate Home"><img src="./assets/logo.png" alt="Chwink Real Estate Logo" class="logo-img"></a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="residential.html">Residential</a>
+        <a href="commercial.html">Commercial</a>
+        <a href="industrial.html">Industrial</a>
+        <a href="clients.html">Clients</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
     <div class="nav-actions">
       <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode">
         <span class="theme-icon">🌙</span>
       </button>
-      <a href="contact.html" class="btn-primary nav-cta">Get in Touch</a>
       <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
+      <a href="contact.html" class="btn-primary nav-cta">Get in Touch</a>
     </div>
   </nav>
 
@@ -54,9 +53,7 @@
   <div class="mobile-overlay" id="mobile-overlay"></div>
   <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-label="Mobile navigation">
     <div class="mobile-drawer-header">
-      <a href="index.html" class="logo">
-        <div class="logo-box">C</div> CHWINK
-      </a>
+      <a href="index.html" class="logo"><img src="./assets/logo.png" alt="Chwink Real Estate Logo" class="logo-img"></a>
       <button class="mobile-close" id="mobile-close" aria-label="Close menu">✕</button>
     </div>
     <a href="index.html" class="active">Home</a>
@@ -71,26 +68,27 @@
   </div>
 
   <!-- Hero -->
-  <header class="hero-card-light">
+  <header class="hero-card-dark">
     <div class="hero-slider">
-      <img src="./assets/hero.jpg" alt="Pune city skyline" class="hero-bg slide-1" loading="eager">
+      <img src="./assets/cta-bg.png" alt="Pine forest villa" class="hero-bg slide-1" loading="eager">
       <img src="./assets/commercial.jpg" alt="Commercial Real Estate" class="hero-bg slide-2" loading="lazy">
       <img src="./assets/industrial.jpg" alt="Industrial Properties" class="hero-bg slide-3" loading="lazy">
       <img src="./assets/residential.jpg" alt="Residential Real Estate" class="hero-bg slide-4" loading="lazy">
     </div>
-    <div class="hero-overlay-light"></div>
+    <div class="hero-overlay"></div>
     <div class="hero-content" style="max-width:1280px; margin:0 auto; width:100%; padding:0 var(--s-xl);">
       <div class="hero-text-box">
-        <span class="eyebrow">Since 1987 · Registered NAR India</span>
-        <h1 class="t-display-xl hero-title">
-          We Mean Business<br>&amp; We Care.
+        <span class="eyebrow" style="letter-spacing: 0.12em; font-weight: 700; text-transform: uppercase;">Chwink Dhillon Real Estate Developers</span>
+        <h1 class="t-display-xl hero-title" style="line-height: 1.15; margin-bottom: var(--s-md); margin-top: var(--s-xs);">
+          Let us find a place<br>
+          <span style="color: var(--c-primary); font-weight: 800; font-size: 0.9em; text-shadow: 0 0 30px rgba(118, 185, 0, 0.15);">you can call home</span>
         </h1>
-        <p class="t-heading-lg hero-subtitle">
-          Pune's most trusted real estate consultancy — residential, commercial, and industrial properties for buyers, sellers, landlords, tenants, and MNCs.
+        <p class="t-heading-lg hero-subtitle" style="margin-bottom: var(--s-xl);">
+          Pune's premier property consultants since 1987. We specialize in matching corporate MNC offices, luxury villas, residential flats, and built-to-suit industrial projects to your precise needs.
         </p>
-        <div class="flex-wrap">
-          <a href="commercial.html" class="btn-primary">Explore Properties</a>
-          <a href="about.html" class="btn-outline-glass">Our Story</a>
+        <div class="actions">
+          <a href="contact.html" class="btn-primary">Send Us a Message</a>
+          <a href="#expertise" class="btn-outline-glass">Browse Properties</a>
         </div>
       </div>
     </div>
@@ -119,7 +117,7 @@
   </div>
 
   <!-- Expertise Cards -->
-  <section class="section-pad" style="background-color:var(--c-surface-soft);">
+  <section id="expertise" class="section-pad" style="background-color:var(--c-surface-soft);">
     <div class="container">
       <div class="section-header fade-in">
         <p class="eyebrow">What We Offer</p>
@@ -469,13 +467,15 @@
   <!-- Final CTA -->
   <section class="cta-strip-dark fade-in">
     <div class="container">
-      <h2 class="t-display-lg" style="margin-bottom:var(--s-md);">Let's Find Your Dream Property</h2>
-      <p class="t-body-md" style="color:var(--c-on-dark-mute); max-width:520px; margin:0 auto var(--s-xl);">
-        Call, email, or visit us — the better informed we both become, the better you can be served.
-      </p>
-      <div class="actions">
-        <a href="contact.html" class="btn-primary">Send Us a Message</a>
-        <a href="residential.html" class="btn-outline-on-dark">Browse Properties</a>
+      <div class="cta-content">
+        <h2>Let us find a place<br><span>you can call home</span></h2>
+        <p>
+          Pune's premier property consultants since 1987. We specialize in matching corporate MNC offices, luxury villas, residential flats, and built-to-suit industrial projects to your precise needs.
+        </p>
+        <div class="actions">
+          <a href="contact.html" class="btn-primary">Send Us a Message</a>
+          <a href="residential.html" class="btn-outline-on-dark" style="border-color: rgba(255,255,255,0.4); color: #ffffff;">Browse Properties</a>
+        </div>
       </div>
     </div>
   </section>
@@ -485,9 +485,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <a href="index.html" class="logo" style="margin-bottom:var(--s-md); display:inline-flex;">
-            <div class="logo-box">C</div> CHWINK
-          </a>
+          <a href="index.html" class="logo" style="margin-bottom:var(--s-md); display:inline-flex;"><img src="./assets/logo.png" alt="Chwink Real Estate Logo" class="logo-img"></a>
           <p class="brand-desc">Chwink Dhillon Real Estate Developers — Pune's trusted property consultancy since 1987. Registered with NAR India &amp; Estate Association of Pune.</p>
           <div class="footer-social">
             <a href="mailto:harleendhillon@chwink.com" aria-label="Email us">✉</a>

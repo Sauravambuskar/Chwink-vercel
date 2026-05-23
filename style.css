@@ -221,28 +221,70 @@ ul, ol {
 
 /* Logo */
 .logo {
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--c-ink);
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: var(--s-sm);
   flex-shrink: 0;
+  transition: opacity var(--t-base);
 }
 
-.logo-box {
-  width: 28px;
-  height: 28px;
-  background-color: var(--c-primary);
-  border-radius: var(--r-sm);
+.logo:hover {
+  opacity: 0.95;
+}
+
+.logo-img {
+  height: 44px; /* Perfect desktop header height for horizontal layout */
+  width: auto;
+  object-fit: contain;
+  display: block;
+  mix-blend-mode: multiply; /* Removes solid white background box seamlessly in light mode */
+  transition: transform var(--t-base), filter var(--t-base), background-color var(--t-base), height var(--t-base);
+}
+
+.logo:hover .logo-img {
+  transform: scale(1.02);
+}
+
+/* For footer: since it has a solid dark background, enclose the logo inside a clean, rounded badge */
+.footer-section .logo-img {
+  background-color: #ffffff;
+  padding: 6px 14px; /* Balanced landscape padding for horizontal logo */
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  height: 38px;
+  mix-blend-mode: normal; /* Disable multiply inside the white badge */
+}
+
+/* Dark mode style: showcase the logo inside a deliberate, premium white badge card */
+[data-theme="dark"] .logo-img {
+  background-color: #ffffff;
+  padding: 6px 16px; /* Elegant horizontal card padding */
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  height: 38px;
+  mix-blend-mode: normal; /* Disable multiply in dark mode */
+}
+
+/* Mobile Responsive Scaling */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 32px; /* Slimmer height on mobile to ensure perfect layout spacing */
+  }
+
+  [data-theme="dark"] .logo-img {
+    height: 28px;
+    padding: 4px 10px;
+  }
+}
+
+/* Nav Center Group (Wrapper for Logo + Nav Menu) */
+.nav-center-group {
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: -0.5px;
+  gap: 32px; /* Elegant gap between Logo and Navbar menu */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Nav Links */
@@ -276,13 +318,13 @@ ul, ol {
 .nav-links a.active::after {
   content: '';
   position: absolute;
-  bottom: -20px;
+  bottom: -15.5px; /* Sits exactly on the 64px header bottom hairline border */
   left: 50%;
   transform: translateX(-50%);
-  width: 20px;
-  height: 2px;
+  width: 24px;
+  height: 3px;
   background-color: var(--c-primary);
-  border-radius: 1px;
+  border-radius: 1.5px;
 }
 
 /* Nav Actions */
@@ -588,14 +630,58 @@ ul, ol {
 }
 
 .hero-text-box {
-  max-width: 560px;
+  max-width: 580px;
   background: var(--c-glass-bg);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   padding: 48px;
-  border-radius: 20px;
+  border-radius: 0;
   border: 1px solid var(--c-glass-border);
-  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid var(--c-primary);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.12);
+  transition: transform var(--t-lift), box-shadow var(--t-lift);
+}
+
+.hero-text-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 48px 96px rgba(0, 0, 0, 0.18);
+}
+
+.hero-card-dark .hero-text-box {
+  background: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  transform: none !important;
+}
+
+.hero-card-dark .hero-text-box:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.hero-card-dark .hero-title {
+  color: #ffffff !important;
+}
+
+.hero-card-dark .hero-subtitle {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.hero-card-dark .eyebrow {
+  color: var(--c-primary) !important;
+}
+
+.hero-card-dark .btn-outline-glass {
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  color: #ffffff !important;
+}
+
+.hero-card-dark .btn-outline-glass:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: #ffffff !important;
 }
 
 .hero-title {
@@ -1082,28 +1168,68 @@ ul, ol {
    CTA STRIP DARK
    ═══════════════════════════════════════════ */
 .cta-strip-dark {
-  background-color: var(--c-surface-dark);
-  color: var(--c-on-dark);
-  padding: var(--s-section) var(--s-xl);
-  text-align: center;
   position: relative;
+  background-image: url('./assets/cta-bg.png');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
   overflow: hidden;
+  text-align: left;
 }
 
 .cta-strip-dark::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(118,185,0,0.06) 0%, transparent 60%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.3) 100%);
+  z-index: 1;
   pointer-events: none;
+}
+
+.cta-strip-dark .container {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--s-xl);
+}
+
+.cta-strip-dark .cta-content {
+  max-width: 680px;
+}
+
+.cta-strip-dark h2 {
+  font-size: clamp(32px, 4.5vw, 48px);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: var(--s-md);
+  color: #ffffff;
+  letter-spacing: -1px;
+}
+
+.cta-strip-dark h2 span {
+  color: var(--c-primary);
+  text-shadow: 0 0 30px rgba(118, 185, 0, 0.4);
+}
+
+.cta-strip-dark p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: var(--s-xl);
+  max-width: 540px;
 }
 
 .cta-strip-dark .actions {
   display: flex;
   gap: var(--s-md);
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  margin-top: var(--s-xl);
+  margin-top: 0;
 }
 
 /* ═══════════════════════════════════════════
@@ -1796,6 +1922,7 @@ ul, ol {
   .grid-6 { grid-template-columns: repeat(3, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 
+  .nav-center-group { position: static; transform: none; display: flex; align-items: center; gap: 20px; margin-right: auto; }
   .nav-links { gap: 0; }
   .nav-links a { font-size: 13px; padding: 6px 8px; }
 }
