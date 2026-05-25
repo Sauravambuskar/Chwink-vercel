@@ -1,12 +1,86 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Clients | Chwink Real Estate Developers Pune</title>
-  <meta name="description" content="Chwink Dhillon Real Estate — trusted by MNCs including Posco, LG, Tata Group, Hyundai, Skoda, Shinhan Bank and leading Pune builders.">
+  <meta name="description"
+    content="Chwink Dhillon Real Estate — trusted by MNCs including Posco, LG, Tata Group, Hyundai, Skoda, Shinhan Bank and leading Pune builders.">
   <link rel="stylesheet" href="./style.css">
+  <style>
+    /* Prevent the dark gradient overlay on logo cards */
+    .client-card.logo-card::after {
+      display: none;
+    }
+
+    /* Logo card base adjustments for clean rendering */
+    .client-card.logo-card {
+      background-color: var(--c-surface-soft);
+      border: 1px solid var(--c-hairline);
+    }
+  </style>
+  <link rel="canonical" href="https://chwink.com/clients.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://chwink.com/clients.html">
+  <meta property="og:title" content="Our Clients | Chwink Real Estate Developers Pune">
+  <meta property="og:description"
+    content="Chwink Dhillon Real Estate — trusted by MNCs including Posco, LG, Tata Group, Hyundai, Skoda, Shinhan Bank and leading Pune builders.">
+  <meta property="og:image" content="https://chwink.com/assets/logo.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://chwink.com/clients.html">
+  <meta name="twitter:title" content="Our Clients | Chwink Real Estate Developers Pune">
+  <meta name="twitter:description"
+    content="Chwink Dhillon Real Estate — trusted by MNCs including Posco, LG, Tata Group, Hyundai, Skoda, Shinhan Bank and leading Pune builders.">
+  <meta name="twitter:image" content="https://chwink.com/assets/logo.png">
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Chwink Dhillon Real Estate Developers",
+    "image": "https://chwink.com/assets/logo.png",
+    "@id": "https://chwink.com/#agent",
+    "url": "https://chwink.com/clients.html",
+    "telephone": "+91-9823060807",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12, P.T. Gera Centre, Bund Garden Road",
+      "addressLocality": "Pune",
+      "postalCode": "411001",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 18.5362,
+      "longitude": 73.8797
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "sameAs": [
+      "https://wa.me/919823060807"
+    ]
+  }
+  </script>
 </head>
+
 <body>
 
   <div class="utility-bar">
@@ -36,7 +110,8 @@
       </div>
     </div>
     <div class="nav-actions">
-      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"><span class="theme-icon">🌙</span></button>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"><span
+          class="theme-icon">🌙</span></button>
       <a href="contact.html" class="btn-primary nav-cta">Get in Touch</a>
       <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
@@ -45,7 +120,7 @@
   <div class="mobile-overlay" id="mobile-overlay"></div>
   <div class="mobile-drawer" id="mobile-drawer">
     <div class="mobile-drawer-header">
-      <a href="index.html" class="logo" ><img src="./assets/logo.png" alt="Chwink Real Estate Logo" class="logo-img"></a>
+      <a href="index.html" class="logo"><img src="./assets/logo.png" alt="Chwink Real Estate Logo" class="logo-img"></a>
       <button class="mobile-close" id="mobile-close">✕</button>
     </div>
     <a href="index.html">Home</a>
@@ -69,28 +144,18 @@
       </nav>
       <h1 class="t-display-xl" style="margin-bottom:var(--s-md);">Our Clients</h1>
       <p class="t-heading-lg" style="color:var(--c-on-dark-mute); max-width:600px;">
-        Trusted by multinational corporations and leading Pune developers for over 35 years. Our clients span automotive, steel, banking, and technology sectors.
+        Trusted by multinational corporations and leading Pune developers for over 35 years. Our clients span
+        automotive, steel, banking, and technology sectors.
       </p>
     </div>
-  </div>
-
-  <!-- Sub Nav -->
-  <div class="sub-nav-strip">
-    <a href="#mncs" class="active">MNC Associations</a>
-    <a href="#builders">Developer Partnerships</a>
-    <a href="contact.html">Become a Client</a>
   </div>
 
   <!-- Stats -->
   <div class="stats-bar">
     <div class="container">
       <div class="stat-item">
-        <div class="num" data-count="10" data-suffix="+">10+</div>
+        <div class="num" data-count="8" data-suffix="+">8+</div>
         <div class="lbl">MNC Clients</div>
-      </div>
-      <div class="stat-item">
-        <div class="num" data-count="10" data-suffix="+">10+</div>
-        <div class="lbl">Builder Partners</div>
       </div>
       <div class="stat-item">
         <div class="num" data-count="35" data-suffix="+">35+</div>
@@ -109,88 +174,43 @@
       <div class="section-header fade-in">
         <p class="eyebrow">Multinational Companies</p>
         <h2 class="t-display-lg">MNC Associations</h2>
-        <p class="t-body-md">We are the preferred real estate partner for these multinational corporations in Pune — handling leasing, sale, and executive relocation.</p>
+        <p class="t-body-md">We are the preferred real estate partner for these multinational corporations in Pune —
+          handling leasing, sale, and executive relocation.</p>
       </div>
 
-      <div class="grid-4 fade-in delay-2" style="margin-bottom:var(--s-xxl);" id="mnc-grid">
-        <div class="client-card">
-          <div class="corner-square"></div>
-          <div class="client-initial" style="font-size:14px; font-weight:700; background:rgba(118,185,0,0.1); color:var(--c-primary);">PS</div>
-          <strong class="t-card-title">Posco Group</strong>
-          <span class="badge-tag">Steel &amp; Industry</span>
-          <p class="t-body-sm" style="color:var(--c-mute); text-align:center;">South Korean steel and engineering conglomerate — industrial facility leasing.</p>
-        </div>
-
-        <div class="client-card">
-          <div class="corner-square"></div>
-          <div class="client-initial" style="font-size:16px; font-weight:700; background:rgba(118,185,0,0.1); color:var(--c-primary);">LG</div>
-          <strong class="t-card-title">LG Electronics</strong>
-          <span class="badge-tag">Electronics</span>
-          <p class="t-body-sm" style="color:var(--c-mute); text-align:center;">Global consumer electronics and home appliance major — office and showroom spaces.</p>
-        </div>
-
-        <div class="client-card">
-          <div class="corner-square"></div>
-          <div class="client-initial" style="font-size:14px; font-weight:700; background:rgba(118,185,0,0.1); color:var(--c-primary);">TG</div>
-          <strong class="t-card-title">Tata Group</strong>
-          <span class="badge-tag">Conglomerate</span>
-          <p class="t-body-sm" style="color:var(--c-mute); text-align:center;">India's largest conglomerate — commercial offices, industrial facilities, and management relocation.</p>
-        </div>
-
-        <div class="client-card">
-          <div class="corner-square"></div>
-          <div class="client-initial" style="font-size:14px; font-weight:700; background:rgba(118,185,0,0.1); color:var(--c-primary);">SK</div>
-          <strong class="t-card-title">Skoda Auto India</strong>
-          <span class="badge-tag">Automotive</span>
-          <p class="t-body-sm" style="color:var(--c-mute); text-align:center;">European automotive brand with India operations in Pune — facility and executive accommodation.</p>
-        </div>
-
-        <div class="client-card">
-          <div class="corner-square"></div>
-          <div class="client-initial" style="font-size:14px; font-weight:700; background:rgba(118,185,0,0.1); color:var(--c-primary);">IJ</div>
-          <strong class="t-card-title">ILJIN GLOBAL INDIA</strong>
-          <span class="badge-tag">Automotive Parts</span>
-          <p class="t-body-sm" style="color:var(--c-mute); text-align:center;">Korean automotive components manufacturer — factory leasing in Pune's MIDC zones.</p>
-        </div>
-
-        <div class="client-card">
-          <div class="corner-square"></div>
-          <div class="client-initial" style="font-size:14px; font-weight:700; background:rgba(118,185,0,0.1); color:var(--c-primary);">HM</div>
-          <strong class="t-card-title">Hyundai Motors</strong>
-          <span class="badge-tag">Automotive</span>
-          <p class="t-body-sm" style="color:var(--c-mute); text-align:center;">Korean automotive major — India operations support including office, showroom, and accommodation.</p>
-        </div>
-
-        <div class="client-card">
-          <div class="corner-square"></div>
-          <div class="client-initial" style="font-size:14px; font-weight:700; background:rgba(118,185,0,0.1); color:var(--c-primary);">HA</div>
-          <strong class="t-card-title">Hyundai Automotive</strong>
-          <span class="badge-tag">Automotive</span>
-          <p class="t-body-sm" style="color:var(--c-mute); text-align:center;">Hyundai's automotive group entity — dealer setup, leasing, and management housing in Pune.</p>
-        </div>
-
-        <div class="client-card">
-          <div class="corner-square"></div>
-          <div class="client-initial" style="font-size:12px; font-weight:700; background:rgba(118,185,0,0.1); color:var(--c-primary);">HD</div>
-          <strong class="t-card-title" style="font-size:14px;">HD Construction Equipment India</strong>
-          <span class="badge-tag">Construction</span>
-          <p class="t-body-sm" style="color:var(--c-mute); text-align:center;">Heavy construction equipment MNC — manufacturing facility and office setup in Pune.</p>
-        </div>
-
-        <div class="client-card">
-          <div class="corner-square"></div>
-          <div class="client-initial" style="font-size:14px; font-weight:700; background:rgba(118,185,0,0.1); color:var(--c-primary);">EK</div>
-          <strong class="t-card-title">E Korea</strong>
-          <span class="badge-tag">Technology</span>
-          <p class="t-body-sm" style="color:var(--c-mute); text-align:center;">Korean technology company — commercial office spaces and management residential arrangements.</p>
-        </div>
-
-        <div class="client-card">
-          <div class="corner-square"></div>
-          <div class="client-initial" style="font-size:14px; font-weight:700; background:rgba(118,185,0,0.1); color:var(--c-primary);">SB</div>
-          <strong class="t-card-title">Shinhan Bank India</strong>
-          <span class="badge-tag">Banking</span>
-          <p class="t-body-sm" style="color:var(--c-mute); text-align:center;">Leading Korean bank with India operations — branch office space acquisition across Pune.</p>
+      <div class="logo-carousel-box fade-in delay-2" id="mnc-carousel">
+        <div class="grid-4 mnc-logo-grid">
+          <div class="logo-grid-card">
+            <img src="https://i.postimg.cc/fL4Y4fcy/Chat-GPT-Image-May-26-2026-12-39-08-AM.png" alt="Tata Group"
+              loading="lazy">
+          </div>
+          <div class="logo-grid-card">
+            <img src="https://i.postimg.cc/Tw8n8JVh/Chat-GPT-Image-May-26-2026-12-39-14-AM.png" alt="Skoda Auto India"
+              loading="lazy">
+          </div>
+          <div class="logo-grid-card">
+            <img src="https://i.postimg.cc/63sCsfrt/Chat-GPT-Image-May-26-2026-12-39-17-AM.png" alt="ILJIN GLOBAL INDIA"
+              loading="lazy">
+          </div>
+          <div class="logo-grid-card">
+            <img src="https://i.postimg.cc/rm656N1K/Chat-GPT-Image-May-26-2026-12-39-20-AM.png" alt="Hyundai Motors"
+              loading="lazy">
+          </div>
+          <div class="logo-grid-card">
+            <img src="https://i.postimg.cc/nzvBn92C/Chat-GPT-Image-May-26-2026-12-39-23-AM.png" alt="Hyundai Automotive"
+              loading="lazy">
+          </div>
+          <div class="logo-grid-card">
+            <img src="https://i.postimg.cc/j5zPRnc6/Chat-GPT-Image-May-26-2026-12-39-26-AM.png"
+              alt="HD Construction Equipment India" loading="lazy">
+          </div>
+          <div class="logo-grid-card">
+            <img src="https://i.postimg.cc/NM1mQ2DP/Chat-GPT-Image-May-26-2026-12-39-29-AM.png" alt="E Korea"
+              loading="lazy">
+          </div>
+          <div class="logo-grid-card">
+            <img src="https://i.postimg.cc/gjmRjctM/LG.png" alt="LG Electronics" loading="lazy">
+          </div>
         </div>
       </div>
 
@@ -201,159 +221,35 @@
         <div class="grid-3" style="gap:var(--s-xl);">
           <div>
             <h4 class="t-body-strong" style="margin-bottom:var(--s-sm);">🏢 Commercial Offices</h4>
-            <p class="t-body-sm" style="color:var(--c-mute);">Office leasing and sale — with built-to-suit options for clients with custom requirements.</p>
+            <p class="t-body-sm" style="color:var(--c-mute);">Office leasing and sale — with built-to-suit options for
+              clients with custom requirements.</p>
           </div>
           <div>
             <h4 class="t-body-strong" style="margin-bottom:var(--s-sm);">🏭 Factories &amp; Warehouses</h4>
-            <p class="t-body-sm" style="color:var(--c-mute);">Industrial facilities on lease or sale — BTS factories, factory land, warehousing across Pune MIDC.</p>
+            <p class="t-body-sm" style="color:var(--c-mute);">Industrial facilities on lease or sale — BTS factories,
+              factory land, warehousing across Pune MIDC.</p>
           </div>
           <div>
             <h4 class="t-body-strong" style="margin-bottom:var(--s-sm);">🏡 Flats &amp; Bungalows</h4>
-            <p class="t-body-sm" style="color:var(--c-mute);">Executive residential accommodation for management staff — furnished and unfurnished options.</p>
+            <p class="t-body-sm" style="color:var(--c-mute);">Executive residential accommodation for management staff —
+              furnished and unfurnished options.</p>
           </div>
           <div>
             <h4 class="t-body-strong" style="margin-bottom:var(--s-sm);">🛒 Showrooms</h4>
-            <p class="t-body-sm" style="color:var(--c-mute);">High-visibility ground-floor showroom spaces for automotive and retail brand establishments.</p>
+            <p class="t-body-sm" style="color:var(--c-mute);">High-visibility ground-floor showroom spaces for
+              automotive and retail brand establishments.</p>
           </div>
           <div>
             <h4 class="t-body-strong" style="margin-bottom:var(--s-sm);">🏗️ Factory Land</h4>
-            <p class="t-body-sm" style="color:var(--c-mute);">Land parcels in MIDC and NA zones for greenfield industrial project setup.</p>
+            <p class="t-body-sm" style="color:var(--c-mute);">Land parcels in MIDC and NA zones for greenfield
+              industrial project setup.</p>
           </div>
           <div>
             <h4 class="t-body-strong" style="margin-bottom:var(--s-sm);">📦 Warehousing</h4>
-            <p class="t-body-sm" style="color:var(--c-mute);">Grade-A warehousing and cold storage facilities near NH highways for distribution operations.</p>
+            <p class="t-body-sm" style="color:var(--c-mute);">Grade-A warehousing and cold storage facilities near NH
+              highways for distribution operations.</p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Builder Partnerships -->
-  <section class="section-pad" style="background-color:var(--c-surface-soft);" id="builders">
-    <div class="container">
-      <div class="section-header fade-in">
-        <p class="eyebrow">Developer Network</p>
-        <h2 class="t-display-lg">Associated Builders &amp; Developers</h2>
-        <p class="t-body-md">We work with Pune's leading builders — giving our clients access to their best projects across residential and commercial categories.</p>
-      </div>
-      <div class="grid-4 fade-in delay-2">
-
-        <div class="client-card" style="display: flex; flex-direction: column; justify-content: flex-end; padding: 16px;">
-          <img src="./assets/img1.jpg" alt="Panchshil Realty" class="client-logo-img" loading="lazy">
-          <div class="corner-square"></div>
-          <div style="position: relative; z-index: 3;">
-            <strong class="t-card-title" style="color: #fff; margin-bottom: 8px; display: block;">Panchshil Realty</strong>
-            <div style="display:flex; gap:4px; flex-wrap:wrap; justify-content:center;">
-              <span class="badge-tag" style="font-size:10px; background: rgba(0,0,0,0.5); color: #fff; border: 1px solid rgba(255,255,255,0.2);">Commercial</span>
-              <span class="badge-tag" style="font-size:10px; background: rgba(0,0,0,0.5); color: #fff; border: 1px solid rgba(255,255,255,0.2);">Residential</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="client-card" style="display: flex; flex-direction: column; justify-content: flex-end; padding: 16px;">
-          <img src="./assets/img2.jpg" alt="Malpani Group" class="client-logo-img" loading="lazy">
-          <div class="corner-square"></div>
-          <div style="position: relative; z-index: 3;">
-            <strong class="t-card-title" style="color: #fff; margin-bottom: 8px; display: block;">Malpani Group</strong>
-            <div style="display:flex; gap:4px; flex-wrap:wrap; justify-content:center;">
-              <span class="badge-tag" style="font-size:10px; background: rgba(0,0,0,0.5); color: #fff; border: 1px solid rgba(255,255,255,0.2);">Commercial</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="client-card" style="display: flex; flex-direction: column; justify-content: flex-end; padding: 16px;">
-          <img src="./assets/img3.jpg" alt="Vascon Engineers" class="client-logo-img" loading="lazy">
-          <div class="corner-square"></div>
-          <div style="position: relative; z-index: 3;">
-            <strong class="t-card-title" style="color: #fff; margin-bottom: 8px; display: block;">Vascon Engineers</strong>
-            <div style="display:flex; gap:4px; flex-wrap:wrap; justify-content:center;">
-              <span class="badge-tag" style="font-size:10px; background: rgba(0,0,0,0.5); color: #fff; border: 1px solid rgba(255,255,255,0.2);">Commercial</span>
-              <span class="badge-tag" style="font-size:10px; background: rgba(0,0,0,0.5); color: #fff; border: 1px solid rgba(255,255,255,0.2);">Residential</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="client-card" style="display: flex; flex-direction: column; justify-content: flex-end; padding: 16px;">
-          <img src="./assets/img4.jpg" alt="Kolte Patil" class="client-logo-img" loading="lazy">
-          <div class="corner-square"></div>
-          <div style="position: relative; z-index: 3;">
-            <strong class="t-card-title" style="color: #fff; margin-bottom: 8px; display: block;">Kolte Patil</strong>
-            <div style="display:flex; gap:4px; flex-wrap:wrap; justify-content:center;">
-              <span class="badge-tag" style="font-size:10px; background: rgba(0,0,0,0.5); color: #fff; border: 1px solid rgba(255,255,255,0.2);">Residential</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="client-card" style="display: flex; flex-direction: column; justify-content: flex-end; padding: 16px;">
-          <img src="./assets/img5.jpg" alt="Lodha Group" class="client-logo-img" loading="lazy">
-          <div class="corner-square"></div>
-          <div style="position: relative; z-index: 3;">
-            <strong class="t-card-title" style="color: #fff; margin-bottom: 8px; display: block;">Lodha Group</strong>
-            <div style="display:flex; gap:4px; flex-wrap:wrap; justify-content:center;">
-              <span class="badge-tag" style="font-size:10px; background: rgba(0,0,0,0.5); color: #fff; border: 1px solid rgba(255,255,255,0.2);">Commercial</span>
-              <span class="badge-tag" style="font-size:10px; background: rgba(0,0,0,0.5); color: #fff; border: 1px solid rgba(255,255,255,0.2);">Residential</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="client-card" style="display: flex; flex-direction: column; justify-content: flex-end; padding: 16px;">
-          <img src="./assets/img6.jpg" alt="Pride Builder" class="client-logo-img" loading="lazy">
-          <div class="corner-square"></div>
-          <div style="position: relative; z-index: 3;">
-            <strong class="t-card-title" style="color: #fff; margin-bottom: 8px; display: block;">Pride Builder</strong>
-            <div style="display:flex; gap:4px; flex-wrap:wrap; justify-content:center;">
-              <span class="badge-tag" style="font-size:10px; background: rgba(0,0,0,0.5); color: #fff; border: 1px solid rgba(255,255,255,0.2);">Commercial</span>
-              <span class="badge-tag" style="font-size:10px; background: rgba(0,0,0,0.5); color: #fff; border: 1px solid rgba(255,255,255,0.2);">Residential</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="client-card" style="display: flex; flex-direction: column; justify-content: flex-end; padding: 16px;">
-          <img src="./assets/img8.jpg" alt="Goel Ganga" class="client-logo-img" loading="lazy">
-          <div class="corner-square"></div>
-          <div style="position: relative; z-index: 3;">
-            <strong class="t-card-title" style="color: #fff; margin-bottom: 8px; display: block;">Goel Ganga</strong>
-            <div style="display:flex; gap:4px; flex-wrap:wrap; justify-content:center;">
-              <span class="badge-tag" style="font-size:10px; background: rgba(0,0,0,0.5); color: #fff; border: 1px solid rgba(255,255,255,0.2);">Commercial</span>
-              <span class="badge-tag" style="font-size:10px; background: rgba(0,0,0,0.5); color: #fff; border: 1px solid rgba(255,255,255,0.2);">Residential</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="client-card" style="display: flex; flex-direction: column; justify-content: flex-end; padding: 16px;">
-          <img src="./assets/img9.jpg" alt="Nyati Builder" class="client-logo-img" loading="lazy">
-          <div class="corner-square"></div>
-          <div style="position: relative; z-index: 3;">
-            <strong class="t-card-title" style="color: #fff; margin-bottom: 8px; display: block;">Nyati Builder</strong>
-            <div style="display:flex; gap:4px; flex-wrap:wrap; justify-content:center;">
-              <span class="badge-tag" style="font-size:10px; background: rgba(0,0,0,0.5); color: #fff; border: 1px solid rgba(255,255,255,0.2);">Commercial</span>
-              <span class="badge-tag" style="font-size:10px; background: rgba(0,0,0,0.5); color: #fff; border: 1px solid rgba(255,255,255,0.2);">Residential</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="client-card" style="display: flex; flex-direction: column; justify-content: flex-end; padding: 16px;">
-          <img src="./assets/img10.jpg" alt="VTP Realty" class="client-logo-img" loading="lazy">
-          <div class="corner-square"></div>
-          <div style="position: relative; z-index: 3;">
-            <strong class="t-card-title" style="color: #fff; margin-bottom: 8px; display: block;">VTP Realty</strong>
-            <div style="display:flex; gap:4px; flex-wrap:wrap; justify-content:center;">
-              <span class="badge-tag" style="font-size:10px; background: rgba(0,0,0,0.5); color: #fff; border: 1px solid rgba(255,255,255,0.2);">Residential</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="client-card" style="display: flex; flex-direction: column; justify-content: flex-end; padding: 16px;">
-          <img src="./assets/hero.jpg" alt="Godrej Properties" class="client-logo-img" loading="lazy">
-          <div class="corner-square"></div>
-          <div style="position: relative; z-index: 3;">
-            <strong class="t-card-title" style="color: #fff; margin-bottom: 8px; display: block;">Godrej Properties</strong>
-            <div style="display:flex; gap:4px; flex-wrap:wrap; justify-content:center;">
-              <span class="badge-tag" style="font-size:10px; background: rgba(0,0,0,0.5); color: #fff; border: 1px solid rgba(255,255,255,0.2);">Residential</span>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
@@ -362,7 +258,8 @@
   <section class="cta-strip-dark fade-in">
     <div class="container">
       <h2 class="t-display-lg" style="margin-bottom:var(--s-md);">Join Our Client Network</h2>
-      <p class="t-body-md" style="color:var(--c-on-dark-mute); max-width:520px; margin:0 auto var(--s-xl);">Whether you're an MNC looking for a facility or a developer seeking a trusted broker — we'd love to work with you.</p>
+      <p class="t-body-md" style="color:var(--c-on-dark-mute); max-width:520px; margin:0 auto var(--s-xl);">Whether
+        you're an MNC looking for a facility or a developer seeking a trusted broker — we'd love to work with you.</p>
       <div class="actions">
         <a href="contact.html" class="btn-primary">Get in Touch</a>
         <a href="services.html" class="btn-outline-on-dark">Our Services</a>
@@ -375,8 +272,10 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <a href="index.html" class="logo" style="margin-bottom:var(--s-md); display:inline-flex;"><img src="./assets/logo.png" alt="Chwink Real Estate Logo" class="logo-img"></a>
-          <p class="brand-desc">Chwink Dhillon Real Estate Developers — Pune's trusted property consultancy since 1987.</p>
+          <a href="index.html" class="logo" style="margin-bottom:var(--s-md); display:inline-flex;"><img
+              src="./assets/logo.png" alt="Chwink Real Estate Logo" class="logo-img"></a>
+          <p class="brand-desc">Chwink Dhillon Real Estate Developers — Pune's trusted property consultancy since 1987.
+          </p>
         </div>
         <div class="footer-col">
           <h4>Properties</h4>
@@ -404,8 +303,10 @@
     </div>
   </footer>
 
-  <a href="https://wa.me/919823060807" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+  <a href="https://wa.me/919823060807" class="whatsapp-float" target="_blank" rel="noopener"
+    aria-label="WhatsApp">💬</a>
   <button class="back-to-top" aria-label="Back to top">↑</button>
   <script type="module" src="./main.js"></script>
 </body>
+
 </html>

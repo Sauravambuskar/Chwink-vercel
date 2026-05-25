@@ -2052,3 +2052,73 @@ ul, ol {
     width: 100%;
   }
 }
+
+/* ═══════════════════════════════════════════
+   LOGO GRID SYSTEM (STATIC SHOWCASE)
+   ═══════════════════════════════════════════ */
+.logo-carousel-box {
+  background-color: var(--c-surface-soft);
+  border: 1px solid var(--c-hairline);
+  padding: 32px var(--s-xl);
+  border-radius: var(--r-sm);
+  position: relative;
+  margin-bottom: var(--s-xxl);
+}
+
+.mnc-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--s-xl);
+}
+
+.logo-grid-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 130px;
+  padding: 12px;
+  background-color: transparent;
+  border: none;
+  transition: transform var(--t-lift);
+}
+
+.logo-grid-card:hover {
+  transform: translateY(-4px);
+}
+
+.logo-grid-card img {
+  max-height: 80px;
+  max-width: 100%;
+  object-fit: contain;
+  filter: none;
+  opacity: 1;
+  transition: transform var(--t-base);
+}
+
+.logo-grid-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Mobile responsive styling for the grid */
+@media (max-width: 1024px) {
+  .mnc-logo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-carousel-box {
+    padding: 24px var(--s-lg);
+  }
+  .mnc-logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--s-lg);
+  }
+  .logo-grid-card {
+    height: 100px;
+    padding: 8px;
+  }
+  .logo-grid-card img {
+    max-height: 60px;
+  }
+}
