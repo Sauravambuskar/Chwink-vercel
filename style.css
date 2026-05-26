@@ -164,17 +164,20 @@ ul, ol {
 .utility-bar {
   background-color: var(--c-surface-soft);
   color: var(--c-mute);
-  height: 36px;
+  min-height: 36px;
+  height: auto;
   display: flex;
   align-items: center;
-  padding: 0 var(--s-xl);
-  font-size: 12px;
+  padding: 6px var(--s-xl);
+  font-size: 11px;
 }
 
 .utility-bar .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px var(--s-xl);
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
@@ -194,7 +197,25 @@ ul, ol {
 .utility-bar-left, .utility-bar-right {
   display: flex;
   align-items: center;
-  gap: var(--s-xl);
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.utility-bar a,
+.utility-bar span {
+  white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+  .utility-bar .container {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+  }
+  .utility-bar-left, .utility-bar-right {
+    justify-content: center;
+  }
 }
 
 /* ═══════════════════════════════════════════
@@ -203,16 +224,16 @@ ul, ol {
 .primary-nav {
   background-color: var(--c-canvas);
   color: var(--c-ink);
-  height: 64px;
+  min-height: 72px; /* Accommodates taller new logo layout */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 var(--s-xl);
+  padding: var(--s-xs) var(--s-xl);
   position: sticky;
   top: 0;
   z-index: 200;
   box-shadow: 0 1px 0 var(--c-hairline);
-  transition: box-shadow var(--t-base);
+  transition: box-shadow var(--t-base), min-height var(--t-base);
 }
 
 .primary-nav.scrolled {
@@ -233,7 +254,7 @@ ul, ol {
 }
 
 .logo-img {
-  height: 44px; /* Perfect desktop header height for horizontal layout */
+  height: 56px; /* High visibility for text layout to human eyes */
   width: auto;
   object-fit: contain;
   display: block;
@@ -248,32 +269,32 @@ ul, ol {
 /* For footer: since it has a solid dark background, enclose the logo inside a clean, rounded badge */
 .footer-section .logo-img {
   background-color: #ffffff;
-  padding: 6px 14px; /* Balanced landscape padding for horizontal logo */
+  padding: 8px 16px; /* Balanced landscape padding for horizontal logo */
   border-radius: 6px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  height: 38px;
+  height: 48px;
   mix-blend-mode: normal; /* Disable multiply inside the white badge */
 }
 
 /* Dark mode style: showcase the logo inside a deliberate, premium white badge card */
 [data-theme="dark"] .logo-img {
   background-color: #ffffff;
-  padding: 6px 16px; /* Elegant horizontal card padding */
+  padding: 8px 18px; /* Elegant horizontal card padding */
   border-radius: 6px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
-  height: 38px;
+  height: 48px;
   mix-blend-mode: normal; /* Disable multiply in dark mode */
 }
 
 /* Mobile Responsive Scaling */
 @media (max-width: 768px) {
   .logo-img {
-    height: 32px; /* Slimmer height on mobile to ensure perfect layout spacing */
+    height: 44px; /* Highly visible height on mobile to ensure readable text */
   }
 
   [data-theme="dark"] .logo-img {
-    height: 28px;
-    padding: 4px 10px;
+    height: 40px;
+    padding: 6px 12px;
   }
 }
 
@@ -698,6 +719,13 @@ ul, ol {
   line-height: 1.6;
 }
 
+.hero-text-box .actions {
+  display: flex;
+  gap: var(--s-md);
+  flex-direction: row;
+  align-items: center;
+}
+
 .btn-outline-glass {
   display: inline-flex;
   align-items: center;
@@ -725,15 +753,12 @@ ul, ol {
 
 .hero-content .eyebrow {
   display: inline-block;
-  background-color: var(--c-primary);
-  color: #fff;
-  font-size: 11px;
+  color: var(--c-primary);
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding: 4px 10px;
-  border-radius: var(--r-sm);
-  margin-bottom: var(--s-lg);
+  letter-spacing: 0.12em;
+  margin-bottom: var(--s-md);
 }
 
 .hero-inner {
@@ -1655,15 +1680,20 @@ ul, ol {
   z-index: 150;
   width: 52px;
   height: 52px;
-  background-color: #25D366;
   border-radius: var(--r-full);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 26px;
   text-decoration: none;
   box-shadow: 0 4px 16px rgba(0,0,0,0.25);
   transition: transform var(--t-base), box-shadow var(--t-base);
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--r-full);
+  display: block;
 }
 
 .whatsapp-float:hover {
@@ -1993,9 +2023,9 @@ ul, ol {
 }
 
 /* ═══════════════════════════════════════════
-   RESPONSIVE — MOBILE (≤480px)
+   RESPONSIVE — MOBILE (≤576px)
    ═══════════════════════════════════════════ */
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .t-display-xl { font-size: 28px; }
   .t-display-lg { font-size: 22px; }
 
@@ -2042,11 +2072,13 @@ ul, ol {
   }
 
   /* Full-width hero CTA buttons on mobile */
-  .hero-text-box .flex-wrap {
+  .hero-text-box .actions {
     flex-direction: column;
     align-items: stretch;
+    gap: var(--s-sm);
+    width: 100%;
   }
-  .hero-text-box .flex-wrap a {
+  .hero-text-box .actions a {
     text-align: center;
     justify-content: center;
     width: 100%;
