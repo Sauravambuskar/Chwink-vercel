@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /private/
 
 Sitemap: https://chwink.com/sitemap.xml
+Host: https://chwink.com
