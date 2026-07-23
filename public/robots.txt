@@ -1,6 +1,15 @@
 User-agent: *
 Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
 Disallow: /private/
+Disallow: /.vscode/
 
 Sitemap: https://chwink.com/sitemap.xml
+Sitemap: https://www.chwink.com/sitemap.xml
 Host: https://chwink.com
