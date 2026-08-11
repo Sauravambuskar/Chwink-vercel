@@ -60,31 +60,6 @@
 }
 
 /* ═══════════════════════════════════════════
-   DARK MODE OVERRIDES
-   ═══════════════════════════════════════════ */
-[data-theme="dark"] {
-  --c-canvas:           #0e0e0e;
-  --bg-pattern:         none;
-  --c-surface-soft:     #1a1a1a;
-  --c-surface-dark:     #000000;
-  --c-surface-elevated: #242424;
-  --c-hairline:         #2e2e2e;
-  --c-hairline-strong:  #404040;
-  --c-glass-bg:         rgba(15, 15, 15, 0.65);
-  --c-glass-border:     rgba(255, 255, 255, 0.1);
-
-  --c-ink:              #f0f0f0;
-  --c-body:             #cccccc;
-  --c-mute:             #888888;
-  --c-stone:            #666666;
-  --c-ash:              #555555;
-  --c-on-dark:          #f0f0f0;
-  --c-on-dark-mute:     rgba(240,240,240,0.65);
-
-  --c-link-blue:        #4d8fff;
-}
-
-/* ═══════════════════════════════════════════
    BASE RESET
    ═══════════════════════════════════════════ */
 *, *::before, *::after {
@@ -276,25 +251,10 @@ ul, ol {
   mix-blend-mode: normal; /* Disable multiply inside the white badge */
 }
 
-/* Dark mode style: showcase the logo inside a deliberate, premium white badge card */
-[data-theme="dark"] .logo-img {
-  background-color: #ffffff;
-  padding: 8px 18px; /* Elegant horizontal card padding */
-  border-radius: 6px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
-  height: 48px;
-  mix-blend-mode: normal; /* Disable multiply in dark mode */
-}
-
 /* Mobile Responsive Scaling */
 @media (max-width: 768px) {
   .logo-img {
     height: 44px; /* Highly visible height on mobile to ensure readable text */
-  }
-
-  [data-theme="dark"] .logo-img {
-    height: 40px;
-    padding: 6px 12px;
   }
 }
 
@@ -354,28 +314,6 @@ ul, ol {
   align-items: center;
   gap: var(--s-md);
   flex-shrink: 0;
-}
-
-/* Theme Toggle */
-.theme-toggle {
-  background: none;
-  border: 1px solid var(--c-hairline);
-  color: var(--c-mute);
-  width: 36px;
-  height: 36px;
-  border-radius: var(--r-sm);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  transition: all var(--t-base);
-  flex-shrink: 0;
-}
-
-.theme-toggle:hover {
-  border-color: var(--c-primary);
-  color: var(--c-primary);
 }
 
 /* Hamburger */
@@ -638,10 +576,6 @@ ul, ol {
   inset: 0;
   background: linear-gradient(90deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 60%, transparent 100%);
   z-index: 2;
-}
-
-[data-theme="dark"] .hero-overlay-light {
-  background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
 }
 
 .hero-content {
@@ -949,10 +883,6 @@ ul, ol {
   transform: translateY(-4px);
   border-color: var(--c-primary);
   box-shadow: 0 12px 32px rgba(0,0,0,0.08);
-}
-
-[data-theme="dark"] .card:hover {
-  box-shadow: 0 12px 32px rgba(0,0,0,0.4);
 }
 
 .card-img-wrap {
@@ -1952,14 +1882,6 @@ ul, ol {
 }
 .staggered-grid .staggered-card:nth-child(odd):hover {
   transform: translateY(35px);
-}
-
-[data-theme="dark"] .staggered-card {
-  background: var(--c-surface-soft);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-}
-[data-theme="dark"] .staggered-card:hover {
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .staggered-img-wrap {

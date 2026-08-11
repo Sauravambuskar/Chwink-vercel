@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  initTheme();
   initHamburger();
   initScrollObserver();
   initNavScroll();
@@ -7,34 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initCounters();
   initSubNav();
 });
-
-/* ── THEME TOGGLE ───────────────────────────────────────── */
-function initTheme() {
-  const btn   = document.getElementById("theme-toggle");
-  const root  = document.documentElement;
-  const DARK  = "dark";
-  const LIGHT = "light";
-  const ICON_DARK  = "🌙";
-  const ICON_LIGHT = "☀";
-
-  const saved = localStorage.getItem("chwink-theme") || LIGHT;
-  applyTheme(saved);
-
-  if (btn) btn.addEventListener("click", () => {
-    const next = root.getAttribute("data-theme") === DARK ? LIGHT : DARK;
-    applyTheme(next);
-    localStorage.setItem("chwink-theme", next);
-  });
-
-  function applyTheme(theme) {
-    root.setAttribute("data-theme", theme);
-    if (btn) {
-      const icon = btn.querySelector(".theme-icon");
-      if (icon) icon.textContent = theme === DARK ? ICON_LIGHT : ICON_DARK;
-      btn.setAttribute("aria-label", theme === DARK ? "Switch to light mode" : "Switch to dark mode");
-    }
-  }
-}
 
 /* ── HAMBURGER / MOBILE DRAWER ──────────────────────────── */
 function initHamburger() {
