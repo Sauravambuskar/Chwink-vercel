@@ -1,15 +1,24 @@
+# https://chwink.com/robots.txt
+# Chwink Dhillon Real Estate Developers
+
 User-agent: *
 Allow: /
-
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
 Disallow: /private/
 Disallow: /.vscode/
+Disallow: /*?*utm_
+Disallow: /*?*fbclid
+
+# Explicitly welcome the AI answer engines that drive discovery
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
 
 Sitemap: https://chwink.com/sitemap.xml
-Sitemap: https://www.chwink.com/sitemap.xml
-Host: https://chwink.com

@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+/* Inter is loaded via <link rel="preconnect"> + <link rel="stylesheet"> in each
+   page <head>. Using @import here would chain the font request behind style.css
+   and delay first paint. */
 
 /* ═══════════════════════════════════════════
    DESIGN TOKENS — LIGHT MODE (default)
@@ -89,6 +91,10 @@ body {
 
 img {
   max-width: 100%;
+  /* height:auto keeps the intrinsic width/height attributes (added for CLS)
+     from distorting images once max-width scales them down. Class-level rules
+     such as .card-img/.hero-bg still win on specificity. */
+  height: auto;
   display: block;
 }
 

@@ -13,6 +13,7 @@ export default defineConfig({
         industrial: resolve(__dirname, 'industrial.html'),
         residential: resolve(__dirname, 'residential.html'),
         services: resolve(__dirname, 'services.html'),
+        notFound: resolve(__dirname, '404.html'),
       },
     },
   },

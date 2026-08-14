@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#76b900">
         <meta
             name="robots"
             content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
@@ -19,7 +20,19 @@
         <meta name="geo.position" content="18.5362;73.8797" />
         <meta name="ICBM" content="18.5362, 73.8797" />
         <link rel="icon" type="image/png" href="./assets/logo.png" />
+        <!-- Fonts: preconnect + direct link, so the font request is not chained behind style.css -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
         <link rel="stylesheet" href="./style.css" />
+        <!-- LCP element: the first hero slide. Preloading it starts the fetch
+             before the CSS that references it has been parsed. -->
+        <link
+            rel="preload"
+            as="image"
+            href="./assets/cta-bg.png"
+            fetchpriority="high"
+        />
         <link rel="canonical" href="https://chwink.com/" />
 
         <!-- Open Graph / Facebook -->
@@ -35,12 +48,15 @@
         />
         <meta
             property="og:image"
-            content="https://chwink.com/assets/logo.png"
+            content="https://chwink.com/assets/og-image.jpg"
         />
         <meta
             property="og:image:alt"
-            content="Chwink Dhillon Real Estate Developers logo"
+            content="Chwink Dhillon Real Estate Developers - property consultants in Pune since 1987"
         />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/jpeg" />
         <meta
             property="og:site_name"
             content="Chwink Dhillon Real Estate Developers"
@@ -60,11 +76,11 @@
         />
         <meta
             name="twitter:image"
-            content="https://chwink.com/assets/logo.png"
+            content="https://chwink.com/assets/og-image.jpg"
         />
         <meta
             name="twitter:image:alt"
-            content="Chwink Dhillon Real Estate Developers logo"
+            content="Chwink Dhillon Real Estate Developers - property consultants in Pune since 1987"
         />
         <meta name="twitter:site" content="@chwink" />
 
@@ -182,13 +198,11 @@
             {
                 "@context": "https://schema.org",
                 "@type": "WebSite",
+                "@id": "https://chwink.com/#website",
                 "name": "Chwink Dhillon Real Estate Developers",
                 "url": "https://chwink.com/",
-                "potentialAction": {
-                    "@type": "SearchAction",
-                    "target": "https://chwink.com/?q={search_term_string}",
-                    "query-input": "required name=search_term_string"
-                }
+                "inLanguage": "en-IN",
+                "publisher": { "@id": "https://chwink.com/#agent" }
             }
         </script>
     </head>
@@ -221,16 +235,19 @@
         <nav class="primary-nav" role="navigation" aria-label="Main navigation">
             <div class="nav-center-group">
                 <a
-                    href="index.html"
+                    href="/"
                     class="logo"
                     aria-label="Chwink Real Estate Home"
                     ><img
                         src="./assets/logo.png"
                         alt="Chwink Real Estate Logo"
                         class="logo-img"
-                /></a>
+                        width="583"
+                        height="135"
+                        decoding="async"
+                    /></a>
                 <div class="nav-links" id="nav-links">
-                    <a href="index.html" class="active">Home</a>
+                    <a href="/" class="active">Home</a>
                     <a href="about.html">About Us</a>
                     <a href="residential.html">Residential</a>
                     <a href="commercial.html">Commercial</a>
@@ -264,12 +281,15 @@
             aria-label="Mobile navigation"
         >
             <div class="mobile-drawer-header">
-                <a href="index.html" class="logo"
+                <a href="/" class="logo"
                     ><img
                         src="./assets/logo.png"
                         alt="Chwink Real Estate Logo"
                         class="logo-img"
-                /></a>
+                        width="583"
+                        height="135"
+                        decoding="async"
+                    /></a>
                 <button
                     class="mobile-close"
                     id="mobile-close"
@@ -278,7 +298,7 @@
                     ✕
                 </button>
             </div>
-            <a href="index.html" class="active">Home</a>
+            <a href="/" class="active">Home</a>
             <a href="about.html">About Us</a>
             <a href="residential.html">Residential</a>
             <a href="commercial.html">Commercial</a>
@@ -299,27 +319,40 @@
             <div class="hero-slider">
                 <img
                     src="./assets/cta-bg.png"
-                    alt="Pine forest villa"
+                    alt="Luxury villa property in Pune marketed by Chwink Dhillon Real Estate Developers"
                     class="hero-bg slide-1"
                     loading="eager"
+                    fetchpriority="high"
+                    decoding="async"
+                    width="1024"
+                    height="1024"
                 />
                 <img
                     src="./assets/commercial.jpg"
                     alt="Commercial Real Estate"
                     class="hero-bg slide-2"
                     loading="lazy"
+                    width="800"
+                    height="533"
+                    decoding="async"
                 />
                 <img
                     src="./assets/industrial.jpg"
                     alt="Industrial Properties"
                     class="hero-bg slide-3"
                     loading="lazy"
+                    width="800"
+                    height="534"
+                    decoding="async"
                 />
                 <img
                     src="./assets/residential.jpg"
                     alt="Residential Real Estate"
                     class="hero-bg slide-4"
                     loading="lazy"
+                    width="800"
+                    height="533"
+                    decoding="async"
                 />
             </div>
             <div class="hero-overlay"></div>
@@ -429,6 +462,9 @@
                                 alt="Residential Properties Pune"
                                 class="card-img"
                                 loading="lazy"
+                                width="800"
+                                height="533"
+                                decoding="async"
                             />
                         </div>
                         <span
@@ -464,6 +500,9 @@
                                 alt="Commercial Offices Pune"
                                 class="card-img"
                                 loading="lazy"
+                                width="800"
+                                height="533"
+                                decoding="async"
                             />
                         </div>
                         <span
@@ -499,6 +538,9 @@
                                 alt="Industrial Properties Pune"
                                 class="card-img"
                                 loading="lazy"
+                                width="800"
+                                height="534"
+                                decoding="async"
                             />
                         </div>
                         <span
@@ -534,6 +576,9 @@
                                 alt="Real Estate Consultancy"
                                 class="card-img"
                                 loading="lazy"
+                                width="800"
+                                height="533"
+                                decoding="async"
                             />
                         </div>
                         <span
@@ -623,6 +668,9 @@
                                 alt="Commercial Office Leasing"
                                 class="feature-card-img"
                                 loading="lazy"
+                                width="800"
+                                height="533"
+                                decoding="async"
                             />
                         </div>
                         <h3
@@ -654,6 +702,9 @@
                                 alt="Tenant Representation"
                                 class="feature-card-img"
                                 loading="lazy"
+                                width="800"
+                                height="533"
+                                decoding="async"
                             />
                         </div>
                         <h3
@@ -685,6 +736,9 @@
                                 alt="Investment and Asset Advisory"
                                 class="feature-card-img"
                                 loading="lazy"
+                                width="800"
+                                height="533"
+                                decoding="async"
                             />
                         </div>
                         <h3
@@ -716,6 +770,9 @@
                                 alt="Relocation Services"
                                 class="feature-card-img"
                                 loading="lazy"
+                                width="1200"
+                                height="796"
+                                decoding="async"
                             />
                         </div>
                         <h3
@@ -747,6 +804,9 @@
                                 alt="Project and Construction Planning"
                                 class="feature-card-img"
                                 loading="lazy"
+                                width="800"
+                                height="534"
+                                decoding="async"
                             />
                         </div>
                         <h3
@@ -778,6 +838,9 @@
                                 alt="Housing Loan Assistance"
                                 class="feature-card-img"
                                 loading="lazy"
+                                width="800"
+                                height="534"
+                                decoding="async"
                             />
                         </div>
                         <h3
@@ -834,6 +897,9 @@
                                 alt="Panchshil"
                                 class="client-logo-img"
                                 loading="lazy"
+                                width="800"
+                                height="1067"
+                                decoding="async"
                             />
                             <span class="t-caption-md">Panchshil</span>
                         </div>
@@ -843,6 +909,9 @@
                                 alt="Malpani"
                                 class="client-logo-img"
                                 loading="lazy"
+                                width="800"
+                                height="533"
+                                decoding="async"
                             />
                             <span class="t-caption-md">Malpani</span>
                         </div>
@@ -852,6 +921,9 @@
                                 alt="Vascon"
                                 class="client-logo-img"
                                 loading="lazy"
+                                width="800"
+                                height="533"
+                                decoding="async"
                             />
                             <span class="t-caption-md">Vascon</span>
                         </div>
@@ -861,6 +933,9 @@
                                 alt="Kolte Patil"
                                 class="client-logo-img"
                                 loading="lazy"
+                                width="800"
+                                height="533"
+                                decoding="async"
                             />
                             <span class="t-caption-md">Kolte Patil</span>
                         </div>
@@ -870,6 +945,9 @@
                                 alt="Lodha"
                                 class="client-logo-img"
                                 loading="lazy"
+                                width="800"
+                                height="534"
+                                decoding="async"
                             />
                             <span class="t-caption-md">Lodha</span>
                         </div>
@@ -879,6 +957,9 @@
                                 alt="Pride Builder"
                                 class="client-logo-img"
                                 loading="lazy"
+                                width="800"
+                                height="536"
+                                decoding="async"
                             />
                             <span class="t-caption-md">Pride Builder</span>
                         </div>
@@ -888,6 +969,9 @@
                                 alt="Goel Ganga"
                                 class="client-logo-img"
                                 loading="lazy"
+                                width="800"
+                                height="533"
+                                decoding="async"
                             />
                             <span class="t-caption-md">Goel Ganga</span>
                         </div>
@@ -897,6 +981,9 @@
                                 alt="Nyati Builder"
                                 class="client-logo-img"
                                 loading="lazy"
+                                width="800"
+                                height="1200"
+                                decoding="async"
                             />
                             <span class="t-caption-md">Nyati Builder</span>
                         </div>
@@ -906,6 +993,9 @@
                                 alt="VTP Realty"
                                 class="client-logo-img"
                                 loading="lazy"
+                                width="800"
+                                height="533"
+                                decoding="async"
                             />
                             <span class="t-caption-md">VTP Realty</span>
                         </div>
@@ -915,6 +1005,9 @@
                                 alt="Godrej Properties"
                                 class="client-logo-img"
                                 loading="lazy"
+                                width="1200"
+                                height="796"
+                                decoding="async"
                             />
                             <span class="t-caption-md">Godrej Properties</span>
                         </div>
@@ -926,6 +1019,9 @@
                                 alt="Panchshil"
                                 class="client-logo-img"
                                 loading="lazy"
+                                width="800"
+                                height="1067"
+                                decoding="async"
                             />
                             <span class="t-caption-md">Panchshil</span>
                         </div>
@@ -935,6 +1031,9 @@
                                 alt="Malpani"
                                 class="client-logo-img"
                                 loading="lazy"
+                                width="800"
+                                height="533"
+                                decoding="async"
                             />
                             <span class="t-caption-md">Malpani</span>
                         </div>
@@ -944,6 +1043,9 @@
                                 alt="Vascon"
                                 class="client-logo-img"
                                 loading="lazy"
+                                width="800"
+                                height="533"
+                                decoding="async"
                             />
                             <span class="t-caption-md">Vascon</span>
                         </div>
@@ -953,6 +1055,9 @@
                                 alt="Kolte Patil"
                                 class="client-logo-img"
                                 loading="lazy"
+                                width="800"
+                                height="533"
+                                decoding="async"
                             />
                             <span class="t-caption-md">Kolte Patil</span>
                         </div>
@@ -962,6 +1067,9 @@
                                 alt="Lodha"
                                 class="client-logo-img"
                                 loading="lazy"
+                                width="800"
+                                height="534"
+                                decoding="async"
                             />
                             <span class="t-caption-md">Lodha</span>
                         </div>
@@ -971,6 +1079,9 @@
                                 alt="Pride Builder"
                                 class="client-logo-img"
                                 loading="lazy"
+                                width="800"
+                                height="536"
+                                decoding="async"
                             />
                             <span class="t-caption-md">Pride Builder</span>
                         </div>
@@ -980,6 +1091,9 @@
                                 alt="Goel Ganga"
                                 class="client-logo-img"
                                 loading="lazy"
+                                width="800"
+                                height="533"
+                                decoding="async"
                             />
                             <span class="t-caption-md">Goel Ganga</span>
                         </div>
@@ -989,6 +1103,9 @@
                                 alt="Nyati Builder"
                                 class="client-logo-img"
                                 loading="lazy"
+                                width="800"
+                                height="1200"
+                                decoding="async"
                             />
                             <span class="t-caption-md">Nyati Builder</span>
                         </div>
@@ -998,6 +1115,9 @@
                                 alt="VTP Realty"
                                 class="client-logo-img"
                                 loading="lazy"
+                                width="800"
+                                height="533"
+                                decoding="async"
                             />
                             <span class="t-caption-md">VTP Realty</span>
                         </div>
@@ -1007,6 +1127,9 @@
                                 alt="Godrej Properties"
                                 class="client-logo-img"
                                 loading="lazy"
+                                width="1200"
+                                height="796"
+                                decoding="async"
                             />
                             <span class="t-caption-md">Godrej Properties</span>
                         </div>
@@ -1034,58 +1157,82 @@
                         <!-- Original set -->
                         <div class="logo-card">
                             <img
-                                src="https://i.postimg.cc/fL4Y4fcy/Chat-GPT-Image-May-26-2026-12-39-08-AM.png"
+                                src="./assets/tata-group-client-logo.png"
                                 alt="Tata Group"
                                 loading="eager"
+                                decoding="async"
+                                width="560"
+                                height="308"
                             />
                         </div>
                         <div class="logo-card">
                             <img
-                                src="https://i.postimg.cc/Tw8n8JVh/Chat-GPT-Image-May-26-2026-12-39-14-AM.png"
+                                src="./assets/skoda-auto-client-logo.png"
                                 alt="Skoda Auto India"
                                 loading="eager"
+                                decoding="async"
+                                width="560"
+                                height="308"
                             />
                         </div>
                         <div class="logo-card">
                             <img
-                                src="https://i.postimg.cc/63sCsfrt/Chat-GPT-Image-May-26-2026-12-39-17-AM.png"
+                                src="./assets/iljin-global-client-logo.png"
                                 alt="ILJIN GLOBAL INDIA"
                                 loading="eager"
+                                decoding="async"
+                                width="560"
+                                height="308"
                             />
                         </div>
                         <div class="logo-card">
                             <img
-                                src="https://i.postimg.cc/rm656N1K/Chat-GPT-Image-May-26-2026-12-39-20-AM.png"
+                                src="./assets/hyundai-motors-client-logo.png"
                                 alt="Hyundai Motors"
                                 loading="eager"
+                                decoding="async"
+                                width="560"
+                                height="308"
                             />
                         </div>
                         <div class="logo-card">
                             <img
-                                src="https://i.postimg.cc/nzvBn92C/Chat-GPT-Image-May-26-2026-12-39-23-AM.png"
+                                src="./assets/hyundai-automotive-client-logo.png"
                                 alt="Hyundai Automotive"
                                 loading="eager"
+                                decoding="async"
+                                width="560"
+                                height="308"
                             />
                         </div>
                         <div class="logo-card">
                             <img
-                                src="https://i.postimg.cc/j5zPRnc6/Chat-GPT-Image-May-26-2026-12-39-26-AM.png"
+                                src="./assets/hd-construction-client-logo.png"
                                 alt="HD Construction Equipment India"
                                 loading="eager"
+                                decoding="async"
+                                width="560"
+                                height="308"
                             />
                         </div>
                         <div class="logo-card">
                             <img
-                                src="https://i.postimg.cc/NM1mQ2DP/Chat-GPT-Image-May-26-2026-12-39-29-AM.png"
+                                src="./assets/ekorea-client-logo.png"
                                 alt="E Korea"
                                 loading="eager"
+                                decoding="async"
+                                width="560"
+                                height="308"
                             />
                         </div>
                         <div class="logo-card">
                             <img
-                                src="https://i.postimg.cc/gjmRjctM/LG.png"
+                                src="./assets/lg-electronics-client-logo.png"
                                 alt="LG Electronics"
                                 loading="eager"
+                                decoding="async"
+                                width="561"
+                                height="308"
                             />
                         </div>
                         <div class="logo-card">
@@ -1093,6 +1240,9 @@
                                 src="./assets/sform-india-client-logo.png"
                                 alt="S-Form India"
                                 loading="eager"
+                                width="200"
+                                height="144"
+                                decoding="async"
                             />
                         </div>
                         <div class="logo-card">
@@ -1100,6 +1250,9 @@
                                 src="./assets/man-client-logo.png"
                                 alt="MAN"
                                 loading="eager"
+                                width="261"
+                                height="148"
+                                decoding="async"
                             />
                         </div>
                         <div class="logo-card">
@@ -1107,6 +1260,9 @@
                                 src="./assets/vi-client-logo.png"
                                 alt="Vi"
                                 loading="eager"
+                                width="174"
+                                height="148"
+                                decoding="async"
                             />
                         </div>
                         <div class="logo-card">
@@ -1114,6 +1270,9 @@
                                 src="./assets/bajaj-client-logo.svg"
                                 alt="Bajaj Group"
                                 loading="eager"
+                                width="240"
+                                height="100"
+                                decoding="async"
                             />
                         </div>
                         <div class="logo-card">
@@ -1121,13 +1280,19 @@
                                 src="./assets/starion-client-logo.jpg"
                                 alt="Starion"
                                 loading="eager"
+                                width="148"
+                                height="148"
+                                decoding="async"
                             />
                         </div>
                         <div class="logo-card">
                             <img
-                                src="./assets/hyosung-client-logo.jpg"
+                                src="./assets/hyosung-tnd-client-logo.png"
                                 alt="Hyosung T&amp;D India"
                                 loading="eager"
+                                width="845"
+                                height="297"
+                                decoding="async"
                             />
                         </div>
                         <div class="logo-card">
@@ -1135,6 +1300,9 @@
                                 src="./assets/force-motors-client-logo.jpg"
                                 alt="Force Motors"
                                 loading="eager"
+                                width="224"
+                                height="148"
+                                decoding="async"
                             />
                         </div>
                         <div class="logo-card">
@@ -1142,6 +1310,9 @@
                                 src="./assets/posco-international-client-logo.jpg"
                                 alt="POSCO International"
                                 loading="eager"
+                                width="605"
+                                height="507"
+                                decoding="async"
                             />
                         </div>
                         <div class="logo-card">
@@ -1149,64 +1320,91 @@
                                 src="./assets/posco-ippc-client-logo.jpg"
                                 alt="POSCO-IPPC"
                                 loading="eager"
+                                width="200"
+                                height="200"
+                                decoding="async"
                             />
                         </div>
 
                         <!-- Duplicated set for seamless loop -->
                         <div class="logo-card">
                             <img
-                                src="https://i.postimg.cc/fL4Y4fcy/Chat-GPT-Image-May-26-2026-12-39-08-AM.png"
+                                src="./assets/tata-group-client-logo.png"
                                 alt="Tata Group"
                                 loading="eager"
+                                decoding="async"
+                                width="560"
+                                height="308"
                             />
                         </div>
                         <div class="logo-card">
                             <img
-                                src="https://i.postimg.cc/Tw8n8JVh/Chat-GPT-Image-May-26-2026-12-39-14-AM.png"
+                                src="./assets/skoda-auto-client-logo.png"
                                 alt="Skoda Auto India"
                                 loading="eager"
+                                decoding="async"
+                                width="560"
+                                height="308"
                             />
                         </div>
                         <div class="logo-card">
                             <img
-                                src="https://i.postimg.cc/63sCsfrt/Chat-GPT-Image-May-26-2026-12-39-17-AM.png"
+                                src="./assets/iljin-global-client-logo.png"
                                 alt="ILJIN GLOBAL INDIA"
                                 loading="eager"
+                                decoding="async"
+                                width="560"
+                                height="308"
                             />
                         </div>
                         <div class="logo-card">
                             <img
-                                src="https://i.postimg.cc/rm656N1K/Chat-GPT-Image-May-26-2026-12-39-20-AM.png"
+                                src="./assets/hyundai-motors-client-logo.png"
                                 alt="Hyundai Motors"
                                 loading="eager"
+                                decoding="async"
+                                width="560"
+                                height="308"
                             />
                         </div>
                         <div class="logo-card">
                             <img
-                                src="https://i.postimg.cc/nzvBn92C/Chat-GPT-Image-May-26-2026-12-39-23-AM.png"
+                                src="./assets/hyundai-automotive-client-logo.png"
                                 alt="Hyundai Automotive"
                                 loading="eager"
+                                decoding="async"
+                                width="560"
+                                height="308"
                             />
                         </div>
                         <div class="logo-card">
                             <img
-                                src="https://i.postimg.cc/j5zPRnc6/Chat-GPT-Image-May-26-2026-12-39-26-AM.png"
+                                src="./assets/hd-construction-client-logo.png"
                                 alt="HD Construction Equipment India"
                                 loading="eager"
+                                decoding="async"
+                                width="560"
+                                height="308"
                             />
                         </div>
                         <div class="logo-card">
                             <img
-                                src="https://i.postimg.cc/NM1mQ2DP/Chat-GPT-Image-May-26-2026-12-39-29-AM.png"
+                                src="./assets/ekorea-client-logo.png"
                                 alt="E Korea"
                                 loading="eager"
+                                decoding="async"
+                                width="560"
+                                height="308"
                             />
                         </div>
                         <div class="logo-card">
                             <img
-                                src="https://i.postimg.cc/gjmRjctM/LG.png"
+                                src="./assets/lg-electronics-client-logo.png"
                                 alt="LG Electronics"
                                 loading="eager"
+                                decoding="async"
+                                width="561"
+                                height="308"
                             />
                         </div>
                         <div class="logo-card">
@@ -1214,6 +1412,9 @@
                                 src="./assets/sform-india-client-logo.png"
                                 alt="S-Form India"
                                 loading="eager"
+                                width="200"
+                                height="144"
+                                decoding="async"
                             />
                         </div>
                         <div class="logo-card">
@@ -1221,6 +1422,9 @@
                                 src="./assets/man-client-logo.png"
                                 alt="MAN"
                                 loading="eager"
+                                width="261"
+                                height="148"
+                                decoding="async"
                             />
                         </div>
                         <div class="logo-card">
@@ -1228,6 +1432,9 @@
                                 src="./assets/vi-client-logo.png"
                                 alt="Vi"
                                 loading="eager"
+                                width="174"
+                                height="148"
+                                decoding="async"
                             />
                         </div>
                         <div class="logo-card">
@@ -1235,6 +1442,9 @@
                                 src="./assets/bajaj-client-logo.svg"
                                 alt="Bajaj Group"
                                 loading="eager"
+                                width="240"
+                                height="100"
+                                decoding="async"
                             />
                         </div>
                         <div class="logo-card">
@@ -1242,6 +1452,9 @@
                                 src="./assets/starion-client-logo.jpg"
                                 alt="Starion"
                                 loading="eager"
+                                width="148"
+                                height="148"
+                                decoding="async"
                             />
                         </div>
                         <div class="logo-card">
@@ -1249,6 +1462,9 @@
                                 src="./assets/hyosung-tnd-client-logo.png"
                                 alt="Hyosung T&amp;D"
                                 loading="eager"
+                                width="845"
+                                height="297"
+                                decoding="async"
                             />
                         </div>
                         <div class="logo-card">
@@ -1256,6 +1472,9 @@
                                 src="./assets/force-motors-client-logo.jpg"
                                 alt="Force Motors"
                                 loading="eager"
+                                width="224"
+                                height="148"
+                                decoding="async"
                             />
                         </div>
                         <div class="logo-card">
@@ -1263,6 +1482,9 @@
                                 src="./assets/posco-international-client-logo.png"
                                 alt="POSCO International"
                                 loading="eager"
+                                width="417"
+                                height="167"
+                                decoding="async"
                             />
                         </div>
                         <div class="logo-card">
@@ -1270,6 +1492,9 @@
                                 src="./assets/posco-ippc-client-logo.jpg"
                                 alt="POSCO-IPPC"
                                 loading="eager"
+                                width="200"
+                                height="200"
+                                decoding="async"
                             />
                         </div>
                     </div>
@@ -1412,6 +1637,9 @@
                                         src="./assets/hero.jpg"
                                         alt="35+ Years Active"
                                         loading="lazy"
+                                        width="1200"
+                                        height="796"
+                                        decoding="async"
                                     />
                                 </div>
                                 <div class="icon-circle">
@@ -1465,6 +1693,9 @@
                                         src="./assets/commercial.jpg"
                                         alt="10+ Builder Partners"
                                         loading="lazy"
+                                        width="800"
+                                        height="533"
+                                        decoding="async"
                                     />
                                 </div>
                                 <div class="icon-circle">
@@ -1504,6 +1735,9 @@
                                         src="./assets/industrial.jpg"
                                         alt="10+ MNC Clients"
                                         loading="lazy"
+                                        width="800"
+                                        height="534"
+                                        decoding="async"
                                     />
                                 </div>
                                 <div class="icon-circle">
@@ -1541,6 +1775,9 @@
                                         src="./assets/residential.jpg"
                                         alt="500+ Properties Closed"
                                         loading="lazy"
+                                        width="800"
+                                        height="533"
+                                        decoding="async"
                                     />
                                 </div>
                                 <div class="icon-circle">
@@ -1609,7 +1846,7 @@
                 <div class="footer-grid">
                     <div class="footer-col">
                         <a
-                            href="index.html"
+                            href="/"
                             class="logo"
                             style="
                                 margin-bottom: var(--s-md);
@@ -1619,7 +1856,10 @@
                                 src="./assets/logo.png"
                                 alt="Chwink Real Estate Logo"
                                 class="logo-img"
-                        /></a>
+                                width="583"
+                                height="135"
+                                decoding="async"
+                            /></a>
                         <p class="brand-desc">
                             Chwink Dhillon Real Estate Developers — Pune's
                             trusted property consultancy since 1987. Registered
@@ -1691,8 +1931,7 @@
             target="_blank"
             rel="noopener"
             aria-label="Chat on WhatsApp"
-            ><img src="./assets/whatsapp.png" alt="WhatsApp"
-        /></a>
+            ><img src="./assets/whatsapp.png" alt="WhatsApp" width="512" height="512" loading="lazy" decoding="async"/></a>
 
         <!-- Back to Top -->
         <button class="back-to-top" aria-label="Back to top">↑</button>

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#76b900">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="Chwink Dhillon Real Estate Developers">
   <title>About Chwink Dhillon Real Estate Developers Pune | Since 1987</title>
@@ -13,6 +14,10 @@
   <meta name="geo.position" content="18.5362;73.8797" />
   <meta name="ICBM" content="18.5362, 73.8797" />
   <link rel="icon" type="image/png" href="./assets/logo.png">
+  <!-- Fonts: preconnect + direct link, so the font request is not chained behind style.css -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
   <link rel="stylesheet" href="./style.css">
   <link rel="canonical" href="https://chwink.com/about.html">
   
@@ -21,8 +26,11 @@
   <meta property="og:url" content="https://chwink.com/about.html">
   <meta property="og:title" content="About Chwink Dhillon Real Estate Developers Pune | Since 1987">
   <meta property="og:description" content="About Chwink Dhillon Real Estate Developers — Pune's most trusted property consultancy since 1987. NAR India registered, 500+ deals closed, serving Hyundai, POSCO, Tata, LG & top MNCs.">
-  <meta property="og:image" content="https://chwink.com/assets/logo.png">
-  <meta property="og:image:alt" content="Chwink Dhillon Real Estate Developers logo">
+  <meta property="og:image" content="https://chwink.com/assets/og-image.jpg">
+  <meta property="og:image:alt" content="Chwink Dhillon Real Estate Developers - property consultants in Pune since 1987">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:site_name" content="Chwink Dhillon Real Estate Developers">
   <meta property="og:locale" content="en_IN">
 
@@ -31,8 +39,8 @@
   <meta name="twitter:url" content="https://chwink.com/about.html">
   <meta name="twitter:title" content="About Chwink Dhillon Real Estate Developers Pune | Since 1987">
   <meta name="twitter:description" content="About Chwink Dhillon Real Estate Developers — Pune's most trusted property consultancy since 1987. NAR India registered, 500+ deals closed, serving Hyundai, POSCO, Tata, LG & top MNCs.">
-  <meta name="twitter:image" content="https://chwink.com/assets/logo.png">
-  <meta name="twitter:image:alt" content="Chwink Dhillon Real Estate Developers logo">
+  <meta name="twitter:image" content="https://chwink.com/assets/og-image.jpg">
+  <meta name="twitter:image:alt" content="Chwink Dhillon Real Estate Developers - property consultants in Pune since 1987">
   <meta name="twitter:site" content="@chwink">
 
   <!-- Structured Data JSON-LD -->
@@ -43,7 +51,7 @@
     "name": "Chwink Dhillon Real Estate Developers",
     "image": "https://chwink.com/assets/logo.png",
     "@id": "https://chwink.com/#agent",
-    "url": "https://chwink.com/about.html",
+    "url": "https://chwink.com/",
     "telephone": [
       "+91-9823600500"
     ],
@@ -82,6 +90,48 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://chwink.com/about.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://chwink.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "About Us",
+              "item": "https://chwink.com/about.html"
+            }
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://chwink.com/about.html#webpage",
+          "url": "https://chwink.com/about.html",
+          "name": "About Chwink Dhillon Real Estate Developers",
+          "description": "The story, credentials and team behind Pune's trusted property consultancy, operating on Bund Garden Road since 1987.",
+          "isPartOf": {
+            "@id": "https://chwink.com/#website"
+          },
+          "about": {
+            "@id": "https://chwink.com/#agent"
+          },
+          "breadcrumb": {
+            "@id": "https://chwink.com/about.html#breadcrumb"
+          },
+          "inLanguage": "en-IN"
+        }
+      ]
+    }
+  </script>
 </head>
 <body>
 
@@ -103,9 +153,9 @@
   <!-- Primary Nav -->
   <nav class="primary-nav" role="navigation">
     <div class="nav-center-group">
-      <a href="index.html" class="logo"><img src="./assets/logo.png" alt="Chwink Real Estate Logo" class="logo-img"></a>
+      <a href="/" class="logo"><img src="./assets/logo.png" alt="Chwink Real Estate Logo" class="logo-img" width="583" height="135" decoding="async"></a>
       <div class="nav-links">
-        <a href="index.html">Home</a>
+        <a href="/">Home</a>
         <a href="about.html" class="active">About Us</a>
         <a href="residential.html">Residential</a>
         <a href="commercial.html">Commercial</a>
@@ -127,10 +177,10 @@
   <div class="mobile-overlay" id="mobile-overlay"></div>
   <div class="mobile-drawer" id="mobile-drawer">
     <div class="mobile-drawer-header">
-      <a href="index.html" class="logo" ><img src="./assets/logo.png" alt="Chwink Real Estate Logo" class="logo-img"></a>
+      <a href="/" class="logo" ><img src="./assets/logo.png" alt="Chwink Real Estate Logo" class="logo-img" width="583" height="135" decoding="async"></a>
       <button class="mobile-close" id="mobile-close">✕</button>
     </div>
-    <a href="index.html">Home</a>
+    <a href="/">Home</a>
     <a href="about.html" class="active">About Us</a>
     <a href="residential.html">Residential</a>
     <a href="commercial.html">Commercial</a>
@@ -145,11 +195,11 @@
   <div class="page-hero">
     <div class="container">
       <nav aria-label="Breadcrumb" style="margin-bottom:var(--s-lg);">
-        <a href="index.html" style="font-size:13px; color:var(--c-on-dark-mute); text-decoration:none;">Home</a>
+        <a href="/" style="font-size:13px; color:var(--c-on-dark-mute); text-decoration:none;">Home</a>
         <span style="color:var(--c-hairline-strong); margin:0 8px;">/</span>
         <span style="font-size:13px; color:var(--c-primary);">About Us</span>
       </nav>
-      <h1 class="t-display-xl" style="margin-bottom:var(--s-md);">About Us</h1>
+      <h1 class="t-display-xl" style="margin-bottom:var(--s-md);">About Chwink Dhillon Real Estate Developers, Pune</h1>
       <p class="t-heading-lg" style="color:var(--c-on-dark-mute); max-width:600px;">
         Established in 1987 founder Late Mrs. Rani Dhillon & Late Major G.S Dhillon (Retd.). One of Pune's most trusted and registered real estate firms — we deliver measurable results.
       </p>
@@ -263,7 +313,7 @@
             <p class="t-body-md text-mute">Chwink Dhillons Real Estate Developers was founded by Late Mrs. Rani Dhillon & Late Major G.S Dhillon (Retd.) on Bund Garden Road, Pune — with a mission to bring honest, professional consultancy to buyers and sellers.</p>
           </div>
           <div class="step-image">
-            <img src="./assets/hero.jpg" alt="Founded" class="timeline-img">
+            <img src="./assets/hero.jpg" alt="Founded" class="timeline-img" width="1200" height="796" loading="lazy" decoding="async">
           </div>
         </div>
 
@@ -277,7 +327,7 @@
             <p class="t-body-md text-mute">As Pune emerged as an automotive and IT hub, we became the go-to consultancy for setting up offices, factories, and accommodations for multinational companies entering the Pune market.</p>
           </div>
           <div class="step-image">
-            <img src="./assets/commercial.jpg" alt="MNC Era" class="timeline-img">
+            <img src="./assets/commercial.jpg" alt="MNC Era" class="timeline-img" width="800" height="533" loading="lazy" decoding="async">
           </div>
         </div>
 
@@ -291,7 +341,7 @@
             <p class="t-body-md text-mute">We forged long-term partnerships with Pune's top developers — Panchshil, Vascon, Kolte Patil, Godrej Properties — expanding our residential and commercial portfolio significantly.</p>
           </div>
           <div class="step-image">
-            <img src="./assets/residential.jpg" alt="Builder Partnerships" class="timeline-img">
+            <img src="./assets/residential.jpg" alt="Builder Partnerships" class="timeline-img" width="800" height="533" loading="lazy" decoding="async">
           </div>
         </div>
 
@@ -305,7 +355,7 @@
             <p class="t-body-md text-mute">Expanded into industrial leasing and warehousing — handling factory land, built-to-suit factories, and large warehousing for Korean and Indian MNCs across Pune's industrial corridors.</p>
           </div>
           <div class="step-image">
-            <img src="./assets/industrial.jpg" alt="Industrial" class="timeline-img">
+            <img src="./assets/industrial.jpg" alt="Industrial" class="timeline-img" width="800" height="534" loading="lazy" decoding="async">
           </div>
         </div>
 
@@ -319,7 +369,7 @@
             <p class="t-body-md text-mute">Today, Chwink Dhillons Real Estate Developers remains a Registered Firm with NAR India, serving buyers, sellers, landlords, tenants, and MNCs across Pune and Mumbai.</p>
           </div>
           <div class="step-image">
-            <img src="./assets/img4.jpg" alt="Today" class="timeline-img">
+            <img src="./assets/img4.jpg" alt="Today" class="timeline-img" width="800" height="533" loading="lazy" decoding="async">
           </div>
         </div>
 
@@ -393,7 +443,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <a href="index.html" class="logo" style="margin-bottom:var(--s-md); display:inline-flex;"><img src="./assets/logo.png" alt="Chwink Real Estate Logo" class="logo-img"></a>
+          <a href="/" class="logo" style="margin-bottom:var(--s-md); display:inline-flex;"><img src="./assets/logo.png" alt="Chwink Real Estate Logo" class="logo-img" width="583" height="135" decoding="async"></a>
           <p class="brand-desc">Chwink Dhillon Real Estate Developers — Pune's trusted property consultancy since 1987. Registered with NAR India &amp; Estate Association of Pune.</p>
         </div>
         <div class="footer-col">
@@ -424,7 +474,7 @@
     </div>
   </footer>
 
-  <a href="https://wa.me/919823600500" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="./assets/whatsapp.png" alt="WhatsApp"></a>
+  <a href="https://wa.me/919823600500" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="./assets/whatsapp.png" alt="WhatsApp" width="512" height="512" loading="lazy" decoding="async"></a>
   <button class="back-to-top" aria-label="Back to top">↑</button>
   <script type="module" src="./main.js"></script>
 </body>
